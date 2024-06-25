@@ -2,22 +2,36 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { InicioRoutingModule } from './inicio-routing.module';
-import { ComponentsComponent } from './components/components.component';
+
 import { CardComponent } from './components/card/card.component';
-import { IncioComponent } from './components/incio/incio.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 
+//componentes de angular material
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
-    ComponentsComponent,
+    
     CardComponent,
-    IncioComponent,
     InicioComponent
   ],
   imports: [
     CommonModule,
-    InicioRoutingModule
+    InicioRoutingModule,
+    MatButtonModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatIconModule
+  ],
+  exports:[
+    MatButtonModule,
+    CardComponent,
+    MatCardModule,
+    MatExpansionModule,
+    MatIconModule
   ]
 })
 export class InicioModule { }

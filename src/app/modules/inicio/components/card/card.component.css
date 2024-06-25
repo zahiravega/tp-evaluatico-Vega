@@ -1,0 +1,32 @@
+.container{
+    display:flex ;
+    padding: 10px;
+    justify-content: center;
+    color: aliceblue;
+
+   
+}
+
+h1{
+    text-align: center;
+
+}
+
+.contenido{
+    width: 15rem;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 8px;
+
+}
+.precio{
+    text-align: center;
+    font-size: 20px;
+}
+.col{
+    background-color: rgb(212, 178, 176);
+}
+
+.boton{
+    width: 30px;
+}

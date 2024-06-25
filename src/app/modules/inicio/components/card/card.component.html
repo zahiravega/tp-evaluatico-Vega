@@ -1,1 +1,57 @@
-<p>card works!</p>
+<div class="container">
+  <div class="row">
+
+    <div class="col">
+
+      <div *ngFor="let i of info" class="contenido" >
+
+        <mat-card class="example-card"> 
+          
+            <img mat-card-image src="{{i.imagen}}"  >  
+
+
+
+          <mat-card-header> 
+            
+            <mat-card-title>{{i.nombre}}</mat-card-title>
+            
+          </mat-card-header>
+
+          <br>
+        
+        
+          <mat-card-content>
+           
+           
+
+            <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title> Detalles</mat-panel-title>
+                </mat-expansion-panel-header> 
+                <p>
+                  {{i.descripcion2}}
+                </p>
+                <p>
+                  {{i.descripcion}}
+                </p>
+                 <mat-card-subtitle class="precio">{{i.precio}}</mat-card-subtitle>
+              </mat-expansion-panel>
+            </mat-accordion>
+            
+          </mat-card-content>
+          <mat-card-actions><section>
+            <div class="example-button-row">
+              <button mat-raised-button class="boton">Agregar al carrito</button>
+            </div>
+          </section>
+          </mat-card-actions>
+        </mat-card> 
+
+
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
