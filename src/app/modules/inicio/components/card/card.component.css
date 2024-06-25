@@ -28,5 +28,8 @@ h1{
 }
 
 .boton{
-    width: 30px;
+    justify-content: center;
+}
+.guardado{
+    width: 5px;
 }
