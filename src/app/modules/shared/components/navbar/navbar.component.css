@@ -1,0 +1,19 @@
+.example-spacer{
+    flex: 1 1 auto;
+}
+p{
+    color: black;
+}
+.titulo{
+    text-align: center;
+    justify-content: center;
+}
+ 
+.nav{
+    background-color: blueviolet;
+}
+
+.mat{
+width: 100%;
+}
+
