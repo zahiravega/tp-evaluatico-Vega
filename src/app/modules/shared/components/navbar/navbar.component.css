@@ -1,3 +1,6 @@
+.toolbar1{
+    height: 65px;
+}
 .example-spacer {
     flex: 1 1 auto;
 }
@@ -7,18 +10,20 @@ p {
 }
 
 .titulo {
+    height: 60px;
     text-align: center;
     justify-content: center;
 }
 
 .nav {
-    background-color: rgb(33, 9, 138);
+    background-color: #21098a;
 }
 
 .mat {
     width: 100%;
 }
 .tituloo {
+    height: 50px;
     text-align: center;
     justify-content: center;
     flex: 10 11 ;
@@ -35,7 +40,11 @@ p {
     color: black;
 }
 
-
+.barra{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /*RESPONSIVEEEEEEEEEEEEEEEEEE*/
@@ -81,6 +90,9 @@ p {
         display: none;
     }
     #menuTitulo{
+        display: none;
+    }
+    #menuGuia{
         display: none;
     }
 }

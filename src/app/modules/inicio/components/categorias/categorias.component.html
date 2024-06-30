@@ -1,20 +1,12 @@
-<div class="container px-4 text-center">
-    <div class="row gx-5">
+
+<div class="container">
+    <div class="row">
         <div class="col">
-            <div class="p-3 image-container">
-                <img src="./assets/categorias/1.png" alt="lingerie" routerLink="/conjuntos">
-            </div>
-        </div>
-        <div class="col">
-            <div class="p-3 image-container">
-                <img src="./assets/categorias/3.png" alt="corpiños" routerLink="/corpiños">
-            </div>
-        </div>
-        <div class="col">
-            <div class="p-3 image-container">
-                <img src="./assets/categorias/2.png" alt="bombachas" routerLink="/bombachas">
+            <div *ngFor="let i of img" class="contenido image-container">
+
+                <img src="./assets/categorias/{{i.categoria}}" alt="" routerLink="/{{i.router}}">
+
             </div>
         </div>
     </div>
 </div>
-      

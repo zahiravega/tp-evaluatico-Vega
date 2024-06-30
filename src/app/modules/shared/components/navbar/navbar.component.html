@@ -4,47 +4,52 @@
     <!--LOGO, BARRA DE BUSQUEDA, INICIO SESION, REGISTARSE Y CARRITO -->
 
     <mat-list-item>
-      <mat-toolbar>
+      <mat-toolbar class="toolbar1">
+
 
         <!--menu desplegable para pantallas chicas (pantalla menor a 700px)-->
-  <button id="menuSecciones" mat-icon-button class="example-icon" [matMenuTriggerFor]="seccion">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <mat-menu #seccion="matMenu">
-    <button mat-menu-item routerLink="/inicio">Inicio</button>
-    <button mat-button [matMenuTriggerFor]="productos">Productos</button>
-    <br>
-    <button mat-button>Contacto</button>
-      </mat-menu>
+        <button id="menuSecciones" mat-icon-button class="example-icon" [matMenuTriggerFor]="seccion">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #seccion="matMenu">
+          <button mat-menu-item routerLink="/inicio">Inicio</button>
+          <button mat-button [matMenuTriggerFor]="productos">Productos</button>
+          <br>
+          <button mat-button>Contacto</button>
+          <br>
+          <button mat-button routerLink="/guia">Guia de talles</button>
+        </mat-menu>
+
 
         <!--NOMBRE-->
-         <!--NOMBRE PANTALLAS GRANDE-->
-        <span id="menuTitulo" class="titulo">Afrodita</span>
+        <!--NOMBRE PANTALLAS GRANDE-->
+        <img id="menuTitulo" class="titulo" src="./assets/categorias/LOGO.png" alt="logo">
 
         <!--NOMBRE PANTALLAS CHICAS-->
-        <span id="menuTituloo" class="tituloo ">Afrodita</span>
+        <img id="menuTituloo" class="tituloo" src="./assets/categorias/LOGO.png" alt="logo">
+
 
 
 
         <!--BARRA DE BUSQUEDA PANTALLAS GRANDES-->
-
-        <form  class="d-flex " role="search">
-          <input id="menuBarra" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        </form>
-
+       
+          <form class="d-flex barra" role="search">
+            <input id="menuBarra" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+     
         <span></span>
         <span class="example-spacer"></span>
-      
 
-          <!--BOTON CUENTAS-->
-          <button mat-icon-button [matMenuTriggerFor]="usuario">
-            <mat-icon>person</mat-icon>
-          </button>
-          <mat-menu #usuario="matMenu">
-            <button mat-menu-item routerLink="/registro">Registrarse</button>
-            <button mat-menu-item routerLink="/iniciosesion">Iniciar sesion</button>
-          </mat-menu>
-        
+
+        <!--BOTON CUENTAS-->
+        <button mat-icon-button [matMenuTriggerFor]="usuario">
+          <mat-icon>person</mat-icon>
+        </button>
+        <mat-menu #usuario="matMenu">
+          <button mat-menu-item routerLink="/registro">Registrarse</button>
+          <button mat-menu-item routerLink="/iniciosesion">Iniciar sesion</button>
+        </mat-menu>
+
 
         <div class="example-button-row">
           <!--BOTON DE CARRITO-->
@@ -53,7 +58,7 @@
           </button>
         </div>
 
-        
+
 
       </mat-toolbar>
 
@@ -64,38 +69,38 @@
     <!-- BOTON INICIO, BARRA DE PRODUCTOS, CONTACTO-->
 
     <mat-list-item> <mat-toolbar>
-      
 
 
-      <!--Barra de busqueda que aparece en pantallas chicas-->
-      <form class="d-flex barra2" role="search">
-        <input id="menuBarraa" class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-      </form>
 
-       
-      
- <!--BOTON INICIO-->
-          <button id="menuInicio" mat-button routerLink="/inicio">Inicio </button>
+        <!--Barra de busqueda que aparece en pantallas chicas-->
+        <form class="d-flex barra2" role="search">
+          <input id="menuBarraa" class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+        </form>
+
+
+
+        <!--BOTON INICIO-->
+        <button id="menuInicio" mat-button routerLink="/inicio">Inicio </button>
 
         <!--BARRA DE PRODUCTOS-->
 
         <button id="menuProductos" mat-button [matMenuTriggerFor]="productos">Productos</button>
-        <mat-menu #productos="matMenu" >
+        <mat-menu #productos="matMenu">
           <button mat-menu-item routerLink="/conjuntos">Conjuntos</button>
           <button mat-menu-item routerLink="/corpiños">Corpiños</button>
           <button mat-menu-item routerLink="/bombachas">Bombachas</button>
           <button mat-menu-item routerLink="/medias">Medias</button>
-          <button mat-menu-item  routerLink="/productos">Ver todos los productos</button>
+          <button mat-menu-item routerLink="/productos">Ver todos los productos</button>
         </mat-menu>
 
 
-         <!--BOTON  CONTACTO  -->
+        <!--BOTON  CONTACTO  -->
         <div class="example-button-row">
           <button id="menuContacto" mat-button routerLink="/contacto">Contacto</button>
         </div>
 
         <div class="example-button-row">
-          <button id="menuContacto" mat-button routerLink="/guia">Guia de talles</button>
+          <button id="menuGuia" mat-button routerLink="/guia">Guia de talles</button>
         </div>
 
 

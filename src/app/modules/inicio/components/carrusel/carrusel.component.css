@@ -2,3 +2,31 @@
     margin-left: 100px;
     margin-right: 100px;
 }
+.carrusel2{
+    margin-top: 10px;
+}
+.carousel-item img {
+    width: 100%;
+    height:100%;
+}
+
+
+
+/*pantallas chicas*/
+@media(min-width: 300px) and (max-width: 600px) {
+    #menuCarrusel{
+        display: none;
+    }
+    #beerre{
+        display: none;
+    }
+}
+
+
+/*pantallas grandes */
+@media(min-width:700px) {
+#menuCarrusel2{
+    display: none;
+}
+
+}

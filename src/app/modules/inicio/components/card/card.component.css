@@ -20,14 +20,27 @@ h1{
 p{
     padding: 5px;
     color: white;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 .precio{
     text-align: center;
     font-size: 20px;
     color: #fffefe;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
 }
 .nombre{
     color: rgb(0, 0, 0);
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200px;
+  font-style: normal;
 }
 .example-card{
     background-color: rgb(255, 255, 255);
@@ -38,10 +51,19 @@ p{
 .detalles{
     background-color: rgb(55, 64, 185);
     color: black;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
 .botonn{
     justify-content: center;
     align-items: center;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /*para que el nombre del producto se subraye al señalarlo*/

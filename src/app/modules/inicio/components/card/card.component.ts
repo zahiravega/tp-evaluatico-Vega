@@ -18,6 +18,9 @@ export class CardComponent {
   //inicializar la propiedad info
   constructor() {
     this.info = [
+    
+
+    
 
       {
         id: "",
@@ -53,7 +56,25 @@ export class CardComponent {
         descripcion2: "Material: Algodon con lycra",
         precio: "$1.500",
         imagen: "https://d22fxaf9t8d39k.cloudfront.net/26a49cdccc0e6d5c3d85665377816327d9013951fda0006aa6d85a5f60c7b006296073.jpg"
-      }
+      },
+      
+      {
+        id: "",
+        nombre: "Conjunto de Encaje con ARO",
+        descripcion: "Talles del 90 al 105  ",
+        descripcion2:"Material: encaje",
+        precio: "$9.500",
+        imagen: "https://d22fxaf9t8d39k.cloudfront.net/e7b05cfa46217e0d6fb5c7f2ca9de2415ce9e511b30179eb7fc4e1071a6f2dd8296073.jpg"
+      },
+      
+      {
+        id: "",
+        nombre: "Conjunto simple",
+        descripcion: "Talles: 85, 90, 95, 100  ",
+        descripcion2:"Material: Algodon con Lycra y Puntilla",
+        precio: "$5.000",
+        imagen: "https://d22fxaf9t8d39k.cloudfront.net/15327e12a695ee6039e0978fce8716d0abc72bdb47f2bd14cf41d62bf53d5c95296073.jpg"
+      },
 
     ]
   }
