@@ -45,23 +45,35 @@
     <!-- BOTON INICIO, BARRA DE PRODUCTOS, CONTACTO-->
 
     <mat-list-item><mat-toolbar>
+
+       <!--menu desplegable para pantallas chicas (pantalla menor a 700px)-->
+  <button id="menuSecciones" mat-icon-button class="example-icon" [matMenuTriggerFor]="seccion">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #seccion="matMenu">
+    <button mat-menu-item routerLink="/inicio">Inicio</button>
+    <button mat-button [matMenuTriggerFor]="productos">Productos</button>
+    <br>
+    <button mat-button>Contacto</button>
+      </mat-menu>
       
  <!--BOTON INICIO-->
-        <div class="example-button-row">
-         
-          <button mat-button routerLink="/inicio">Inicio </button>
-        </div>
-        <!--BARRA DE PRODUCTOS--><button mat-button [matMenuTriggerFor]="productos">Productos</button>
+          <button id="menuInicio" mat-button routerLink="/inicio">Inicio </button>
+
+        <!--BARRA DE PRODUCTOS-->
+
+        <button id="menuProductos" mat-button [matMenuTriggerFor]="productos">Productos</button>
         <mat-menu #productos="matMenu">
-          <button mat-menu-item routerLink="conjuntos">Conjuntos</button>
-          <button mat-menu-item routerLink="corpiños">Corpiños</button>
-          <button mat-menu-item routerLink="bombachas">Bombachas</button>
-          <button mat-menu-item routerLink="medias">Medias</button>
+          <button mat-menu-item routerLink="/conjuntos">Conjuntos</button>
+          <button mat-menu-item routerLink="/corpiños">Corpiños</button>
+          <button mat-menu-item routerLink="/bombachas">Bombachas</button>
+          <button mat-menu-item routerLink="/medias">Medias</button>
         </mat-menu>
+
 
          <!--BOTON  CONTACTO  -->
         <div class="example-button-row">
-          <button mat-button>Contacto</button>
+          <button id="menuContacto" mat-button>Contacto</button>
         </div>
 
 
