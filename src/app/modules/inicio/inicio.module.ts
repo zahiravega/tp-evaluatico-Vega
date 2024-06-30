@@ -14,7 +14,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { ContactoComponent } from './components/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     InicioComponent,
     CarruselComponent,
     CategoriasComponent,
-    ContactoComponent
+   
   ],
   imports: [
     CommonModule,

@@ -6,4 +6,5 @@ export interface Productos {
     descripcion2:string;
     imagen: string;
 
+
 }

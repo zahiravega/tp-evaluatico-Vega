@@ -21,7 +21,7 @@ export class CardComponent {
 
       {
         id: "",
-        nombre: "Conjuntos de Algodón con Lycra Taza Soft ",
+        nombre: "Conjuntos Taza Soft ",
         descripcion: "Talles: 85, 90, 95, 100 ",
         descripcion2:"Detalles: Algodón con Lycra ",
         precio: "$7.000",
