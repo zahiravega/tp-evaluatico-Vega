@@ -80,11 +80,12 @@
         <!--BARRA DE PRODUCTOS-->
 
         <button id="menuProductos" mat-button [matMenuTriggerFor]="productos">Productos</button>
-        <mat-menu #productos="matMenu">
+        <mat-menu #productos="matMenu" >
           <button mat-menu-item routerLink="/conjuntos">Conjuntos</button>
           <button mat-menu-item routerLink="/corpiños">Corpiños</button>
           <button mat-menu-item routerLink="/bombachas">Bombachas</button>
           <button mat-menu-item routerLink="/medias">Medias</button>
+          <button mat-menu-item  routerLink="/productos">Ver todos los productos</button>
         </mat-menu>
 
 

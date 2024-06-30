@@ -6,6 +6,7 @@ import { BrasiersComponent } from './brasiers/brasiers.component';
 import { ColalessComponent } from './colaless/colaless.component';
 import { ConjuntosComponent } from './conjuntos/conjuntos.component';
 import { MediasComponent } from './medias/medias.component';
+import { ProductosComponent } from './productos/productos.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { MediasComponent } from './medias/medias.component';
     BrasiersComponent,
     ColalessComponent,
     ConjuntosComponent,
-    MediasComponent
+    MediasComponent,
+    ProductosComponent
   ],
   imports: [
     CommonModule,
