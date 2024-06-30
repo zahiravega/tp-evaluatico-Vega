@@ -5,14 +5,31 @@
 
     <mat-list-item>
       <mat-toolbar>
+
+        <!--menu desplegable para pantallas chicas (pantalla menor a 700px)-->
+  <button id="menuSecciones" mat-icon-button class="example-icon" [matMenuTriggerFor]="seccion">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #seccion="matMenu">
+    <button mat-menu-item routerLink="/inicio">Inicio</button>
+    <button mat-button [matMenuTriggerFor]="productos">Productos</button>
+    <br>
+    <button mat-button>Contacto</button>
+      </mat-menu>
+
         <!--NOMBRE-->
+         <!--NOMBRE PANTALLAS GRANDE-->
+        <span id="menuTitulo" class="titulo">Afrodita</span>
 
-        <span class="titulo">Afrodita</span>
+        <!--NOMBRE PANTALLAS CHICAS-->
+        <span id="menuTituloo" class="tituloo ">Afrodita</span>
 
-        <!--BARRA DE BUSQUEDA-->
 
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+        <!--BARRA DE BUSQUEDA PANTALLAS GRANDES-->
+
+        <form  class="d-flex " role="search">
+          <input id="menuBarra" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         </form>
 
         <span></span>
@@ -36,6 +53,8 @@
           </button>
         </div>
 
+        
+
       </mat-toolbar>
 
     </mat-list-item>
@@ -44,18 +63,16 @@
     <!--item 2-->
     <!-- BOTON INICIO, BARRA DE PRODUCTOS, CONTACTO-->
 
-    <mat-list-item><mat-toolbar>
+    <mat-list-item> <mat-toolbar>
+      
 
-       <!--menu desplegable para pantallas chicas (pantalla menor a 700px)-->
-  <button id="menuSecciones" mat-icon-button class="example-icon" [matMenuTriggerFor]="seccion">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <mat-menu #seccion="matMenu">
-    <button mat-menu-item routerLink="/inicio">Inicio</button>
-    <button mat-button [matMenuTriggerFor]="productos">Productos</button>
-    <br>
-    <button mat-button>Contacto</button>
-      </mat-menu>
+
+      <!--Barra de busqueda que aparece en pantallas chicas-->
+      <form class="d-flex barra2" role="search">
+        <input id="menuBarraa" class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+      </form>
+
+       
       
  <!--BOTON INICIO-->
           <button id="menuInicio" mat-button routerLink="/inicio">Inicio </button>

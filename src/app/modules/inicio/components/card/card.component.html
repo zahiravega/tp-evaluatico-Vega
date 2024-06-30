@@ -13,7 +13,7 @@
 
           <mat-card-header> 
             
-            <mat-card-title>{{i.nombre}}</mat-card-title>
+            <mat-card-title class="nombre">{{i.nombre}}</mat-card-title>
             
           </mat-card-header>
 
@@ -24,9 +24,9 @@
            
            
 
-            <mat-accordion>
-              <mat-expansion-panel>
-                <mat-expansion-panel-header>
+            <mat-accordion class="detalles">
+              <mat-expansion-panel class="detalles">
+                <mat-expansion-panel-header class="detalles">
                   <mat-panel-title> Detalles</mat-panel-title>
                 </mat-expansion-panel-header> 
                 <p>
@@ -40,11 +40,12 @@
             </mat-accordion>
             
           </mat-card-content>
-          <mat-card-actions><section>
-            <div class="example-button-row">
-              <button type="button" class="btn btn-dark">Añadir al carrito</button>
+          <mat-card-actions>
+            
+            <div class="example-button-row botonn">
+              <button type="button" class="btn btn-outline-info">Añadir al carrito</button>
             </div>
-          </section>
+      
           </mat-card-actions>
         </mat-card> 
 

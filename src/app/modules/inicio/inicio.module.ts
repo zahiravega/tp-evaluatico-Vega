@@ -11,12 +11,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 @NgModule({
   declarations: [
     
     CardComponent,
-    InicioComponent
+    InicioComponent,
+    CarruselComponent,
   ],
   imports: [
     CommonModule,

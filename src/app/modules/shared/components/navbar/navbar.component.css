@@ -1,49 +1,82 @@
-.example-spacer{
+.example-spacer {
     flex: 1 1 auto;
 }
-p{
+
+p {
     color: black;
 }
-.titulo{
+
+.titulo {
     text-align: center;
     justify-content: center;
 }
- 
-.nav{
-    background-color: rgb(69, 12, 175);
+
+.nav {
+    background-color: rgb(165, 119, 207);
 }
 
-.mat{
-width: 100%;
+.mat {
+    width: 100%;
 }
+.tituloo {
+    text-align: center;
+    justify-content: center;
+    flex: 10 11 ;
+}
+.barra2{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: 9 9 ;
+}
+
+
+
+
+
+/*RESPONSIVEEEEEEEEEEEEEEEEEE*/
 
 /*pantallas grandes */
-@media(min-width:700px){
-    mat-toolbar{
-      background-color:  rgb(69, 12, 175);
+@media(min-width:700px) {
+    mat-toolbar {
+        background-color: rgb(165, 119, 207);
     }
-    
-    #menuSecciones{
-      display: none;
+
+    #menuSecciones {
+        display: none;
     }
-      }
+    #menuBarraa{
+        display: none;
+    }
+    #menuTituloo{
+        display: none;
+    }
+}
 
 
 
-      /*pantallas chicas*/
-      @media(min-width: 300px) and (max-width: 600px){
-        mat-toolbar{
-          background-color: rgb(69, 12, 175);
-        }
-        #menuInicio{
-    display: none;
-        }
-    
-        #menuProductos{
-    display: none;
-        }
+/*pantallas chicas*/
+@media(min-width: 300px) and (max-width: 600px) {
+    mat-toolbar {
+        background-color: rgb(165, 119, 207);
+    }
 
-        #menuContacto{
-            display: none;
-        }
-      }
+    #menuInicio {
+        display: none;
+    }
+
+    #menuBarra {
+        display: none;
+    }
+
+    #menuProductos {
+        display: none;
+    }
+
+    #menuContacto {
+        display: none;
+    }
+    #menuTitulo{
+        display: none;
+    }
+}
