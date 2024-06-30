@@ -1,1 +1,36 @@
-<p>inicio-de-sesion works!</p>
+<div class="conteiner">
+    <div class="row">
+      <!--titulo principal-->
+        <h1>Inico de sesión</h1>
+        <!--imagen del muñeco -->
+        <i class="material-icons" style="font-size: 200px; ">person</i>
+
+        <!--Ingreso del gmail de usuario-->
+    
+        
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese su Gmail</mat-label>
+          <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: zayvega@gmail.com">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+          
+            
+          <!-- contraseña-->
+          <mat-form-field>
+            <mat-label>Ingrese su contraseña</mat-label>
+            <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-hint aling="start">minimo:6/{{input.value.length}} </mat-hint>
+          </mat-form-field>
+
+
+          <!--boton final-->
+         
+          <button class="boton" mat-raised-button color="primary" (click)="iniciarSesion()">Iniciar sesion</button>
+
+
+    </div>
+</div>
+

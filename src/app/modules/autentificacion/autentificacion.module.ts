@@ -6,6 +6,14 @@ import { InicioDeSesionComponent } from './pages/inicio-de-sesion/inicio-de-sesi
 import { ResgistroComponent } from './pages/resgistro/resgistro.component';
 
 
+//componentes de material
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     InicioDeSesionComponent,
@@ -13,7 +21,26 @@ import { ResgistroComponent } from './pages/resgistro/resgistro.component';
   ],
   imports: [
     CommonModule,
-    AutentificacionRoutingModule
+    AutentificacionRoutingModule,
+    //MATERIAL
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatSelectModule,
+    //angular
+    FormsModule
+  ],
+
+  exports:[
+    InicioDeSesionComponent,
+    ResgistroComponent,
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatSelectModule,
+    FormsModule
   ]
 })
 export class AutentificacionModule { }
