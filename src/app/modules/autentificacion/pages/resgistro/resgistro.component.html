@@ -1,55 +1,66 @@
 <div class="container">
     <div class="row">
+<br>
+        
 
-         <!--icono de persona-->
-         <i class="material-icons" style="font-size: 200px;">person</i>
+        <!--icono de persona-->
+        <i class="material-icons" style="font-size: 150px;">hail </i>
 
         <!-- nombre de usuario -->
         <mat-form-field appearance="fill">
             <mat-label>Ingrese su nombre de usuario</mat-label>
-            <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ej: Zahira">
+            <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ej: tunombre">
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>
 
         <!--apellido-->
         <mat-form-field appearance="fill">
             <mat-label>Ingrese su apellido </mat-label>
-            <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ej: Vega">
+            <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ej: tuapellido">
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-           
-          </mat-form-field>
+
+        </mat-form-field>
 
 
-          <!--email de usuario-->
-          <mat-form-field appearance="fill">
-              <mat-label>Ingrese su Gmail</mat-label>
-              <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: zayvega@gmail.com">
-              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-            </mat-form-field>
+        <!--email de usuario-->
+        <mat-form-field appearance="fill">
+            <mat-label>Ingrese su Gmail</mat-label>
+            <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: tugmail@gmail.com">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
 
-            <!--Rol del usuario-->
-            <mat-form-field>
-              <mat-label>Selecione rol de usuario</mat-label>
-              <select [(ngModel)]="usuarios.rol" matNativeControl required>
+        <!--Rol del usuario-->
+        <mat-form-field>
+            <mat-label>Selecione rol de usuario</mat-label>
+            <select [(ngModel)]="usuarios.rol" matNativeControl required>
                 <option value="admin">Administrador</option>
+                <option value="client">Cliente</option>
                 <option value="visit">Visitante</option>
-                <option value="">Visitante</option>
-              </select>
-            </mat-form-field>
+            </select>
+        </mat-form-field>
 
-            <!-- contraseña-->
-            <mat-form-field>
-              <mat-label>Ingrese su contraseña</mat-label>
-              <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
-              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <!-- contraseña-->
+        <mat-form-field>
+            <mat-label>Ingrese su contraseña</mat-label>
+            <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6"
+                required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-              </button>
-              <mat-hint aling="start">minimo:6/{{input.value.length}} </mat-hint>
-            </mat-form-field>
+            </button>
+            <mat-hint aling="start">minimo:6/{{input.value.length}} </mat-hint>
+        </mat-form-field>
 
-            <!--boton final-->
-       
-           <button class="boton" mat-raised-button color="primary" (click)="registrar()">Registrar</button>
+        <!--boton final-->
+
+        <button class="boton" mat-raised-button color="primary" (click)="registrar()">Registrar</button>
+<br>
+<br>
+<br>
+        <div class="pregunta">
+            <p>¿YA TIENES UNA CUENTA?</p>
+            <p class="link" routerLink="/iniciosesion">INICIAR SESION</p>
+        </div>
 
 
 

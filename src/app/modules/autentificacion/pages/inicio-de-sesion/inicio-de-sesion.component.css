@@ -1,0 +1,32 @@
+.conteiner{
+    width: 60%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.boton{
+    width: 320px;
+    margin: auto;
+    background-color: rgb(74, 74, 224);
+}
+.material-icons{
+    justify-content: center;
+    text-align: center;
+}
+.row{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.link {
+    color: black; 
+    text-decoration: none; 
+    transition: color 0.3s, text-decoration 0.3s; 
+}
+
+.link:hover {
+    color: blue; 
+    text-decoration: underline; 
+}
