@@ -24,7 +24,11 @@ const routes: Routes = [
   },
   {
     path: "", loadChildren:()=> import('./modules/guia-de-talles/guia-de-talles.module').then(m => m.GuiaDeTallesModule)
+  },
+  {
+    path: "", loadChildren:()=> import('./modules/shared/shared.module').then(m => m.SharedModule)
   }
+
 ];
 
 @NgModule({

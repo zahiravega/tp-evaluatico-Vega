@@ -34,7 +34,6 @@ export class InicioDeSesionComponent {
     password: ''
   }
 
-  coleccioniniciosesion: Usuario[] = [];
 
   async iniciarSesion() {
     const credenciales = {
@@ -50,14 +49,24 @@ export class InicioDeSesionComponent {
       })
       .catch(err => {
         alert('hubo un problema la iniciar sesion' + err);
-        
+
+        this.limpiarInputs();
+
       })
-    }
-
-
-
-
 
   }
+
+  limpiarInputs(){
+    const inputs ={
+      email: this.usuarios.email='',
+      password: this.usuarios.password=''
+    }
+  }
+
+
+
+
+
+}
 
 

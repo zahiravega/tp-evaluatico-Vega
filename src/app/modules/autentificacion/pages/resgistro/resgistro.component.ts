@@ -50,22 +50,6 @@ export class ResgistroComponent {
   //funcion para el registro de nuevos usuarios
   async registrar() {
 
-
-  }
-
-  async guardarUsuario() {
-
-    this.servicioFirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
-      .then(res => {
-        console.log(this.usuarios);
-      })
-      .catch(err => {
-        console.log('error', err)
-      })
-    const uid = await this.servicioAuth.obtenerUid();
-    this.usuarios.uid = uid;
-    this.guardarUsuario();
-
     //REGISTRO CON SERVICIO DE AUTH
     const credenciales = {
       email: this.usuarios.email,
@@ -86,9 +70,47 @@ export class ResgistroComponent {
         alert("¡hubo un problema al registrar un nuevo usuario \n" + error);
       })
 
+    const uid = await this.servicioAuth.obtenerUid();
+    this.usuarios.uid = uid;
 
+this.usuarios.password
+
+    this.guardarUsuario();
+
+    this.limpiarInputs();
 
   }
+
+
+  //agregar nuevo usuario
+
+  async guardarUsuario() {
+
+    this.servicioFirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
+      .then(res => {
+        console.log(this.usuarios);
+      })
+      .catch(err => {
+        console.log('error', err)
+      })
+
+  }
+
+
+  //limpiar inputs
+
+  limpiarInputs(){
+    const inputs={
+      uid: this.usuarios.uid='',
+      nombre: this.usuarios.nombre='',
+      apellido: this.usuarios.apellido='',
+      email: this.usuarios.email='',
+      rol: this.usuarios.email= '',
+      password: this.usuarios.password='',
+   }
+  }
+
+
 
 }
 

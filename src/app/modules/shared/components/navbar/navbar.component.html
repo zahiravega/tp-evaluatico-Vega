@@ -33,16 +33,20 @@
 
         <!--BARRA DE BUSQUEDA PANTALLAS GRANDES-->
        
-          <form class="d-flex barra" role="search">
-            <input id="menuBarra" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          </form>
+        <div class="search-input-wrapper" id="menuBarra">
+          <input type="search" class="search-input" placeholder="Buscar" aria-label="Buscar">
+        
+          <span class="search-icon"><i class="fas fa-search"></i></span>
+          
+      </div>
+         
      
         <span></span>
         <span class="example-spacer"></span>
 
 
         <!--BOTON CUENTAS-->
-        <button mat-icon-button [matMenuTriggerFor]="usuario">
+        <button mat-icon-button [matMenuTriggerFor]="usuario" >
           <mat-icon>person</mat-icon>
         </button>
         <mat-menu #usuario="matMenu">
@@ -58,6 +62,14 @@
           </button>
         </div>
 
+        <!--BOTON DE BARRA DE BUSQUEDA PANTALLAS CHICAS-->
+
+        <div class="example-button-row" id="menuBarraa">
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" routerLink="/search">
+            <mat-icon>search</mat-icon>
+          </button>
+        </div>
+
 
 
       </mat-toolbar>
@@ -68,17 +80,11 @@
     <!--item 2-->
     <!-- BOTON INICIO, BARRA DE PRODUCTOS, CONTACTO-->
 
-    <mat-list-item> <mat-toolbar>
-
-
-
-        <!--Barra de busqueda que aparece en pantallas chicas-->
-        <form class="d-flex barra2" role="search">
-          <input id="menuBarraa" class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-        </form>
-
-
-
+    <mat-list-item id="toolbar2">
+      <mat-toolbar >
+        <span></span>
+        <span class="example-spacer"></span>
+       
         <!--BOTON INICIO-->
         <button id="menuInicio" mat-button routerLink="/inicio">Inicio </button>
 

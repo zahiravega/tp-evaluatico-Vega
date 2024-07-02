@@ -1,6 +1,6 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-    </style>
+</style>
 <app-carrusel></app-carrusel>
 <app-categorias></app-categorias>
 <br>
@@ -9,8 +9,33 @@
 <h1>NUESTROS PRODUCTOS DESTACADOS</h1>
 <app-card></app-card>
 
-<div class="booton">
-<button type="button" class="btn btn-secondary boton" routerLink="/productos">VER TODOS LOS PRODUCTOS</button>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn btn-secondary botonn" data-bs-toggle="modal"
+    data-bs-target="#exampleModal">
+    VER TODOS LOS PRODUCTOS
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">¡ATENCIÓN!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                Para poder ver todos los productos debe INICIAR SESION/REGISTRARSE
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    routerLink="/iniciosesion">Iniciar sesion</button>
+                <button type="button" class="btn btn-secondary" routerLink="/registro">Registrarse</button>
+            </div>
+        </div>
+    </div>
 </div>
+
 <br>
 <br>
