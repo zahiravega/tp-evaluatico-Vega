@@ -1,0 +1,23 @@
+.contenedor{
+    background-color:#21098a;
+    height: 210px;
+ }
+ img{
+     height: 10%;
+ }
+ p{
+     font-size: 20px;
+     font-family: "Lora", serif;
+     color: rgb(255, 244, 244);
+ }
+
+ 
+   p.underline-on-hover:hover {
+     text-decoration: underline; 
+   }
+ 
+
+   h1{
+    font-family: "Lora", serif;
+    color: white;
+   }

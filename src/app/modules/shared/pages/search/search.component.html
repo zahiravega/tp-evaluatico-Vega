@@ -1,9 +1,23 @@
 <div class="container">
     <div class="row">
-        <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-list cols="2" rowHeight="1:1">
             <!--BOTON PARA VOLVER AL MENU-->
-            <mat-grid-tile>1</mat-grid-tile>
-            <mat-grid-tile>2</mat-grid-tile>
+            <mat-grid-tile>
+                <div class="example-button-row">
+                    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" routerLink="/inicio">
+                      <mat-icon>arrow_back</mat-icon>
+                    </button>
+                  </div>
+            </mat-grid-tile>
+            <!--BARRA DE BUSQUEDA-->
+            <mat-grid-tile>
+                <div class="search-input-wrapper" id="menuBarra">
+                    <input type="search" class="search-input" placeholder="Buscar" aria-label="Buscar">
+                  
+                    <span class="search-icon"><i class="fas fa-search"></i></span>
+                    
+                </div>
+            </mat-grid-tile>
           </mat-grid-list>
     </div>
 </div>

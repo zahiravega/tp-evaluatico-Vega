@@ -21,3 +21,11 @@ h1{
     justify-content: center;
     align-items: center;
 }
+.botonn{
+    justify-content: center;
+    align-items: center;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
