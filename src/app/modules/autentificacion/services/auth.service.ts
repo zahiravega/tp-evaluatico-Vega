@@ -39,7 +39,8 @@ export class AuthService {
 
 
     /*si el usuario no respeta la estructura de la interfaz/
-    si tuvo problemas con el registro*/
+    si tuvo problemas con el registroo*/
+    
     
     if(user== null){
       return null;
