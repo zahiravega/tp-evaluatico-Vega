@@ -6,6 +6,12 @@ import { FirestoreService } from 'src/app/modules/shared/services/firestore.serv
 //importamos componente de rutas de angular
 import { Router } from '@angular/router';
 
+//importacion de crypto-js
+import * as CryptoJS from 'crypto-js';
+
+//importacion de sweetalert
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-inicio-de-sesion',
@@ -34,32 +40,86 @@ export class InicioDeSesionComponent {
     password: ''
   }
 
+  //coleccion 'iniciarsesion' para iniciar sesion 
+  coleccioniniciarsesion: Usuario[] = [];
 
+  //constante que recibe la informacion ingresada
   async iniciarSesion() {
     const credenciales = {
       email: this.usuarios.email,
       password: this.usuarios.password
     }
 
-    const res = await this.servicioAuth.IniciarSesion(credenciales.email, credenciales.password)
+
+    try {
+      //se obtiene el usuario en la bd
+      const usuarioBD = await this.servicioAuth.obtenerUsuario(credenciales.email);
+
+      if (!usuarioBD || usuarioBD.empty) {
+
+        Swal.fire({
+          title: "¡Oh no!",
+          text: "El correo electrónico no está registrado",
+          icon: "warning"
+        });
+
+        this.limpiarInputs();
+        return;
+
+      }
+
+  
+      const usuarioDoc = usuarioBD.docs[0];
+
+      const usuarioData = usuarioDoc.data() as Usuario;
+
+      //encripta la contraseña que el usuario envia mediante #iniciarSesion
+      const hashedPassword = CryptoJS.SHA256(credenciales.password).toString();
+
+
+      if (hashedPassword !== usuarioData.password) {
+        Swal.fire({
+          title: "¡Hubo un error!",
+          text: "La contraseña ingresada es incorrecta",
+          icon: "error"
+        });
+     
+        this.usuarios.password = '';
+        return;
+
+      }
+
+
+      const res = await this.servicioAuth.IniciarSesion(credenciales.email, credenciales.password)
       .then(res => {
-        alert('se pudo loguear');
+        Swal.fire({
+          title: "¡Bien hecho!",
+          text: "Se inició sesión con exito",
+          icon: "success"
+        });
 
         this.servicioRutas.navigate(['/inicio']);
       })
       .catch(err => {
+        Swal.fire({
+          title: "Ups",
+          text: "Hubo un problema al iniciar sesion" + err,
+          icon: "warning"
+        });
         alert('hubo un problema la iniciar sesion' + err);
-
-        this.limpiarInputs();
-
+        this.limpiarInputs()
       })
+    }
+    catch(error){
+      this.limpiarInputs()
+     }
+    }
 
-  }
 
-  limpiarInputs(){
-    const inputs ={
-      email: this.usuarios.email='',
-      password: this.usuarios.password=''
+  limpiarInputs() {
+    const inputs = {
+      email: this.usuarios.email = '',
+      password: this.usuarios.password = ''
     }
   }
 

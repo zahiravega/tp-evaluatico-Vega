@@ -10,6 +10,9 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { FirestoreService } from 'src/app/modules/shared/services/firestore.service';
 
+//CRYPTO JS
+import * as CryptoJS from 'crypto-js'
+
 @Component({
   selector: 'app-resgistro',
   templateUrl: './resgistro.component.html',
@@ -73,7 +76,10 @@ export class ResgistroComponent {
     const uid = await this.servicioAuth.obtenerUid();
     this.usuarios.uid = uid;
 
-this.usuarios.password
+    //encriptacion de contraseña 
+    this. usuarios.password= CryptoJS.SHA256(this.usuarios.password).toString()
+
+
 
     this.guardarUsuario();
 

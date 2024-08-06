@@ -3,19 +3,24 @@ import { Injectable } from '@angular/core';
 //servicio en la nube de autentificacion de firebase
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(public auth: AngularFireAuth) { }
+  constructor(
+    public auth: AngularFireAuth,
+    private servicioFirestore: AngularFirestore
+
+  
+  ) { }
 
   //funcion para registro
   registrar(email: string, password: string) {
     return this.auth.createUserWithEmailAndPassword(email, password);
 
   }
-
-
   //funcion para inicio de sesion 
   IniciarSesion(email: string, password: string) {
 
@@ -42,6 +47,10 @@ export class AuthService {
       return user.uid;
     }
 
+  }
+
+  obtenerUsuario(email:string){
+    return this.servicioFirestore.collection("usuarios", ref=> ref.where('email','==',email)).get().toPromise();
   }
 
 
