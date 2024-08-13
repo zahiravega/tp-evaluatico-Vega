@@ -14,6 +14,10 @@ import { AdminComponent } from './pages/admin/admin.component';
   imports: [
     CommonModule,
     AdminRoutingModule
+  ],
+  exports:[
+    AdminComponent,
+    TableComponent
   ]
 })
 export class AdminModule { }
