@@ -46,7 +46,7 @@ y atributos numericos (number) se inicializan en 0
         nombre: this.producto.value.nombre!,
         precio: this.producto.value.precio!,
         descripcion: this.producto.value.descripcion!,
-        descripcion2: this.producto.value.descripcion2!,
+        descripcion2:this.producto.value.descripcion2!,
         categoria: this.producto.value.categoria!,
         imagen: this.producto.value.imagen!,
         alt: this.producto.value.alt!
@@ -95,7 +95,7 @@ y atributos numericos (number) se inicializan en 0
       nombre: productoSeleccionado.nombre,
       precio: productoSeleccionado.precio,
       descripcion: productoSeleccionado.descripcion,
-      descripcion2: productoSeleccionado.descripcion2,
+      descripcion2: productoSeleccionado.descripcion,
       categoria: productoSeleccionado.categoria,
       imagen: productoSeleccionado.imagen,
       alt: productoSeleccionado.alt
