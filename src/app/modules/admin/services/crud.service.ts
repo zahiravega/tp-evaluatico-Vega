@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Productos } from 'src/app/models/productos';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
-import { map } from 'rxjs';
+import { map } from 'rxjs'; 
 
 
 
