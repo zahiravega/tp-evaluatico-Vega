@@ -13,11 +13,11 @@
         </button>
         <mat-menu #seccion="matMenu">
           <button mat-menu-item routerLink="/inicio">Inicio</button>
-          <button mat-button [matMenuTriggerFor]="productos">Productos</button>
+          <button mat-menu-item [matMenuTriggerFor]="productos">Productos</button>
           <br>
-          <button mat-button>Contacto</button>
+          <button mat-menu-item routerLink="/contacto" >Contacto</button>
           <br>
-          <button mat-button routerLink="/guia">Guia de talles</button>
+          <button mat-menu-item  routerLink="/guia">Guia de talles</button>
         </mat-menu>
 
 
