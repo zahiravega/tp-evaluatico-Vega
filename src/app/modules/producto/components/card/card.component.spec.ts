@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ColalessComponent } from './colaless.component';
+import { CardComponent } from './card.component';
 
-describe('ColalessComponent', () => {
-  let component: ColalessComponent;
-  let fixture: ComponentFixture<ColalessComponent>;
+describe('CardComponent', () => {
+  let component: CardComponent;
+  let fixture: ComponentFixture<CardComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ColalessComponent]
+      declarations: [CardComponent]
     });
-    fixture = TestBed.createComponent(ColalessComponent);
+    fixture = TestBed.createComponent(CardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
