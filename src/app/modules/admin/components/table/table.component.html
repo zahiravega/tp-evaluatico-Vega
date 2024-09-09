@@ -7,6 +7,7 @@
           <th scope="col">Nombre</th>
           <th scope="col">Precio</th>
           <th scope="col">Descripcion</th>
+          <th scope="col">Descripcion 2</th>
           <th scope="col">Categoria</th>
           <th scope="col">Acciones</th>
       </tr>
@@ -22,6 +23,7 @@
           <td>{{col.nombre}}</td>
           <td>{{col.precio}}</td>
           <td>{{col.descripcion}}</td>
+          <td>{{col.descripcion2}}</td>
           <td>{{col.categoria}}</td>
 
           <!--ACCIONES-->
@@ -78,6 +80,11 @@
         </div>
 
         <div class="mb-3">
+          <label for="form-label">Ingrese la segunda descripcion del producto</label>
+          <input class="form-control" type="text" formControlName="descripcion" placeholder="Ej:fhfiuhrui">
+        </div>
+
+        <div class="mb-3">
           <label for="form-label">Ingrese la imagen del prodcuto</label>
           <input class="form-control" type="text" formControlName="imagen" placeholder="Ej: Cartera">
         </div>
@@ -91,10 +98,12 @@
           <label for="form-label">Seleccioná una categoría</label>
           <select class="form-control" formControlName="categoria" class="form-select">
               <option selected>elija una opcion</option>
-              <option value="alimentacion">Alimentación</option>
-              <option value="juguetes">Juguetes</option>
-              <option value="indumentaria">Indumentaria</option>
-              <option value="accesorios">Accesorios</option>
+              <option value="bombachas">Bombachas</option>
+              <option value="conjuntos">Conjuntos</option>
+              <option value="corpiños">Corpiños</option>
+              <option value="medias">Medias</option>
+              <option value="boxers">Boxers</option>
+           
           </select>
         </div>
       </div>
@@ -131,6 +140,12 @@
                 <input class="form-control" type="text" formControlName="descripcion"
                     placeholder="{{productoEdit.descripcion}}">
             </div>
+            <div class="mb-3">
+
+              <label class="form-label">Ingrese la segunda descripción:</label>
+              <input class="form-control" type="text" formControlName="descripcion2"
+                  placeholder="{{productoEdit.descripcion2}}">
+          </div>
 
             <div class="mb-3">
                 <label class="form-label">Ingrese el precio:</label>
@@ -141,9 +156,11 @@
                 <label class="form-label">Selecciona una categoría:</label>
                 <select class="form-control" formControlName="categoria" class="form-select">
                     <option selected disabled>Elija una opción</option>
-                    <option value="alimentacion">Alimentación</option>
-                    <option value="indumentaria">Indumentaria</option>
-                    <option value="juguete">Juguete</option>
+                    <option value="bombachas">Bombachas</option>
+                    <option value="brasiers">Corpiños</option>
+                    <option value="conjuntos">Conjuntos</option>
+                    <option value="boxers">Boxers</option>
+                    <option value="medias">Medias</option>
                 </select>
             </div>
 

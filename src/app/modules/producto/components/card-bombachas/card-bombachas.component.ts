@@ -3,7 +3,7 @@ import { Productos } from 'src/app/models/productos';
 import { CrudService } from 'src/app/modules/admin/services/crud.service';
 
 @Component({
-  selector: 'app-card-accesorios',
+  selector: 'app-card-bombachas',
   templateUrl: './card-bombachas.component.html',
   styleUrls: ['./card-bombachas.component.css']
 })
