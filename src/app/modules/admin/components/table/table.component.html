@@ -6,8 +6,8 @@
           <th scope="col">Imagen</th>
           <th scope="col">Nombre</th>
           <th scope="col">Precio</th>
-          <th scope="col">Descripcion</th>
-          <th scope="col">Descripcion 2</th>
+          <th scope="col">Detalles</th>
+           <th scope="col">Precio</th>
           <th scope="col">Categoria</th>
           <th scope="col">Acciones</th>
       </tr>
@@ -18,7 +18,7 @@
           <th scope="row">1</th>
 
           <td>
-              <img src="{{col.imagen}}" alt="{{col.alt}}">
+              <img width="200px" src="{{col.imagen}}" alt="{{col.alt}}">
           </td>
           <td>{{col.nombre}}</td>
           <td>{{col.precio}}</td>
@@ -70,18 +70,18 @@
         </div>
 
         <div class="mb-3">
-          <label for="form-label">Ingrese el precio del produco</label>
+          <label for="form-label">Ingrese el precio del producto</label>
           <input class="form-control" type="number" formControlName="precio" placeholder="Ej: $400">
         </div>
 
         <div class="mb-3">
-          <label for="form-label">Ingrese la descripcion del producto</label>
+          <label for="form-label">Ingrese detalles del producto</label>
           <input class="form-control" type="text" formControlName="descripcion" placeholder="Ej:fhfiuhrui">
         </div>
 
         <div class="mb-3">
-          <label for="form-label">Ingrese la segunda descripcion del producto</label>
-          <input class="form-control" type="text" formControlName="descripcion" placeholder="Ej:fhfiuhrui">
+          <label for="form-label">Ingrese la descripcion del producto</label>
+          <input class="form-control" type="text" formControlName="descripcion2" placeholder="Ej:fhfiuhrui">
         </div>
 
         <div class="mb-3">
@@ -98,12 +98,11 @@
           <label for="form-label">Seleccioná una categoría</label>
           <select class="form-control" formControlName="categoria" class="form-select">
               <option selected>elija una opcion</option>
-              <option value="bombachas">Bombachas</option>
               <option value="conjuntos">Conjuntos</option>
-              <option value="corpiños">Corpiños</option>
-              <option value="medias">Medias</option>
-              <option value="boxers">Boxers</option>
-           
+              <option value="brasiers">Corpiños</option>
+              <option value="bombachas">bombachas</option>
+              <option value="medias">medias</option>
+              <option value="boxers">boxers</option>
           </select>
         </div>
       </div>
@@ -136,14 +135,14 @@
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Ingrese una descripción:</label>
+                <label class="form-label">Ingrese detalle:</label>
                 <input class="form-control" type="text" formControlName="descripcion"
                     placeholder="{{productoEdit.descripcion}}">
             </div>
-            <div class="mb-3">
 
-              <label class="form-label">Ingrese la segunda descripción:</label>
-              <input class="form-control" type="text" formControlName="descripcion2"
+            <div class="mb-3">
+              <label class="form-label">Ingrese una descripción:</label>
+              <input class="form-control" type="text" formControlName="descripcion"
                   placeholder="{{productoEdit.descripcion2}}">
           </div>
 
@@ -156,11 +155,11 @@
                 <label class="form-label">Selecciona una categoría:</label>
                 <select class="form-control" formControlName="categoria" class="form-select">
                     <option selected disabled>Elija una opción</option>
-                    <option value="bombachas">Bombachas</option>
-                    <option value="brasiers">Corpiños</option>
                     <option value="conjuntos">Conjuntos</option>
-                    <option value="boxers">Boxers</option>
-                    <option value="medias">Medias</option>
+                    <option value="brasiers">Corpiños</option>
+                    <option value="bombachas">bombachas</option>
+                    <option value="medias">medias</option>
+                    <option value="boxers">boxers</option>
                 </select>
             </div>
 

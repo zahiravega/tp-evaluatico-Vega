@@ -12,7 +12,7 @@ import { BombachasComponent } from './pages/bombachas/bombachas.component';
 import { BrasiersComponent } from './pages/brasiers/brasiers.component';
 import { ConjuntosComponent } from './pages/conjuntos/conjuntos.component';
 import { MediasComponent } from './pages/medias/medias.component';
-import { ProductosComponent } from './pages/productos/productos.component';
+import { ProductoComponent } from './pages/productos/productos.component';
 import { BoxersComponent } from './pages/boxers/boxers.component';
 
 
@@ -29,12 +29,26 @@ import { BoxersComponent } from './pages/boxers/boxers.component';
     BrasiersComponent,
     ConjuntosComponent,
     MediasComponent,
-    ProductosComponent,
+    ProductoComponent,
     BoxersComponent
   ],
   imports: [
     CommonModule,
     ProductoRoutingModule
+  ],
+  exports:[
+    CardComponent,
+    CardBrasiersComponent,
+    CardBombachasComponent,
+    CardConjuntosComponent,
+    CardMediasComponent,
+    CardBoxersComponent,
+    BombachasComponent,
+    BrasiersComponent,
+    ConjuntosComponent,
+    MediasComponent,
+    ProductoComponent,
+    BoxersComponent
   ]
 })
 export class ProductoModule { }

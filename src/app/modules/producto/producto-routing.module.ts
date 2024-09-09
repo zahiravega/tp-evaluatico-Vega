@@ -4,9 +4,8 @@ import { BrasiersComponent} from './pages/brasiers/brasiers.component';
 import { BombachasComponent } from './pages/bombachas/bombachas.component';
 import { ConjuntosComponent } from './pages/conjuntos/conjuntos.component';
 import { MediasComponent } from './pages/medias/medias.component';
-import { ProductoModule } from './producto.module';
 import { BoxersComponent } from './pages/boxers/boxers.component';
-import { ProductosComponent } from './pages/productos/productos.component';
+import { ProductoComponent } from './pages/productos/productos.component';
 const routes: Routes = [
   {
     path:"corpiños", component:BrasiersComponent
@@ -24,7 +23,7 @@ const routes: Routes = [
     path:"boxers", component:BoxersComponent
   },
   {
-    path:"productos",component:ProductosComponent
+    path:"productos",component:ProductoComponent
   }
 ];
 
