@@ -43,7 +43,7 @@ export class CardBombachasComponent {
     //iteramos coleccion de productos con un  'forEach'
     this.coleccionProductos.forEach(producto=>{
       //si es de tipo"accesorios" -> condicional
-      if(producto.categoria=== "accesorios"){
+      if(producto.categoria=== "bombachas"){
         //lo sube/guarda enla coleccion de productos de tipo "accesorios"
         this.coleccionBombachas.push(producto);
       }

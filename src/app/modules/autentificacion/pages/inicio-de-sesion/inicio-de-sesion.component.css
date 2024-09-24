@@ -1,15 +1,4 @@
-.conteiner{
-    width: 60%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
 
-}
-.boton{
-    width: 320px;
-    margin: auto;
-    background-color: rgb(74, 74, 224);
-}
 .material-icons{
     justify-content: center;
     text-align: center;
@@ -29,4 +18,15 @@
 .link:hover {
     color: blue; 
     text-decoration: underline; 
+}
+.container{
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.boton{
+    width: 250px;
+    margin: auto;
 }

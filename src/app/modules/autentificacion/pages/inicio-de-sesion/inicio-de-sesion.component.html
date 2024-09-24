@@ -1,4 +1,4 @@
-<div class="conteiner">
+<div class="container">
     <div class="row">
 
         <!--imagen del muñeco -->
@@ -7,7 +7,7 @@
         <!--Ingreso del gmail de usuario-->
 
 
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill" class="input">
             <mat-label>Ingrese su Gmail</mat-label>
             <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: tugmail@gmail.com">
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
@@ -15,7 +15,7 @@
 
 
         <!-- contraseña-->
-        <mat-form-field>
+        <mat-form-field class="input">
             <mat-label>Ingrese su contraseña</mat-label>
             <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6"
                 required>

@@ -15,9 +15,9 @@
           <button mat-menu-item routerLink="/inicio">Inicio</button>
           <button mat-menu-item [matMenuTriggerFor]="productos">Productos</button>
           <br>
-          <button mat-menu-item routerLink="/contacto" >Contacto</button>
+          <button mat-menu-item routerLink="/contacto">Contacto</button>
           <br>
-          <button mat-menu-item  routerLink="/guia">Guia de talles</button>
+          <button mat-menu-item routerLink="/guia">Guia de talles</button>
         </mat-menu>
 
 
@@ -32,27 +32,27 @@
 
 
         <!--BARRA DE BUSQUEDA PANTALLAS GRANDES-->
-       
+
         <div class="search-input-wrapper" id="menuBarra">
           <input type="search" class="search-input" placeholder="Buscar" aria-label="Buscar">
-        
+
           <span class="search-icon"><i class="fas fa-search"></i></span>
-          
-      </div>
-         
-     
+
+        </div>
+
+
         <span></span>
         <span class="example-spacer"></span>
 
 
         <!--BOTON CUENTAS-->
-        <button mat-icon-button [matMenuTriggerFor]="usuario" >
+        <button mat-icon-button [matMenuTriggerFor]="usuario">
           <mat-icon>person</mat-icon>
         </button>
         <mat-menu #usuario="matMenu">
           <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
-    <button mat-menu-item  (click)="ingresar()" *ngIf="logueado" routerLink="/iniciosesion">Iniciar sesion</button>
-    <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar sesión</button>
+          <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/iniciosesion">Iniciar sesion</button>
+          <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar sesión</button>
         </mat-menu>
 
 
@@ -66,7 +66,8 @@
         <!--BOTON DE BARRA DE BUSQUEDA PANTALLAS CHICAS-->
 
         <div class="example-button-row" id="menuBarraa">
-          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" routerLink="/search">
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+            routerLink="/search">
             <mat-icon>search</mat-icon>
           </button>
         </div>
@@ -82,10 +83,10 @@
     <!-- BOTON INICIO, BARRA DE PRODUCTOS, CONTACTO-->
 
     <mat-list-item id="toolbar2">
-      <mat-toolbar >
+      <mat-toolbar>
         <span></span>
         <span class="example-spacer"></span>
-       
+
         <!--BOTON INICIO-->
         <button id="menuInicio" mat-button routerLink="/inicio">Inicio </button>
 

@@ -7,7 +7,7 @@
           <th scope="col">Nombre</th>
           <th scope="col">Precio</th>
           <th scope="col">Detalles</th>
-           <th scope="col">Precio</th>
+           <th scope="col">Talles</th>
           <th scope="col">Categoria</th>
           <th scope="col">Acciones</th>
       </tr>
@@ -21,7 +21,7 @@
               <img width="200px" src="{{col.imagen}}" alt="{{col.alt}}">
           </td>
           <td>{{col.nombre}}</td>
-          <td>{{col.precio}}</td>
+          <td>${{col.precio}}</td>
           <td>{{col.descripcion}}</td>
           <td>{{col.descripcion2}}</td>
           <td>{{col.categoria}}</td>
@@ -66,7 +66,7 @@
       <div [formGroup]= "producto" class="modal-body">
         <div class="mb-3">
           <label for="form-label">Ingrese el nombre del producto</label>
-          <input class="form-control" type="text" formControlName="nombre" placeholder="Ej: Cartera">
+          <input class="form-control" type="text" formControlName="nombre" placeholder="Ej:Conjunto Lara">
         </div>
 
         <div class="mb-3">
@@ -76,17 +76,17 @@
 
         <div class="mb-3">
           <label for="form-label">Ingrese detalles del producto</label>
-          <input class="form-control" type="text" formControlName="descripcion" placeholder="Ej:fhfiuhrui">
+          <input class="form-control" type="text" formControlName="descripcion" placeholder="Ej:Algodon con lycra">
         </div>
 
         <div class="mb-3">
-          <label for="form-label">Ingrese la descripcion del producto</label>
-          <input class="form-control" type="text" formControlName="descripcion2" placeholder="Ej:fhfiuhrui">
+          <label for="form-label">Ingrese los talles disponibles</label>
+          <input class="form-control" type="text" formControlName="descripcion2" placeholder="Ej:95 y 100">
         </div>
 
         <div class="mb-3">
           <label for="form-label">Ingrese la imagen del prodcuto</label>
-          <input class="form-control" type="text" formControlName="imagen" placeholder="Ej: Cartera">
+          <input class="form-control" type="text" formControlName="imagen" placeholder="Ej: url de la imagen">
         </div>
 
         <div class="mb-3">
@@ -108,8 +108,8 @@
       </div>
       <!--ACCIONES DEL MODAL-->
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-succes" (click)="agregarProducto()" data-bs-dismiss="modal">Guardar</button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-outline-secondary" (click)="agregarProducto()" data-bs-dismiss="modal">Guardar</button>
+        <button type="button" class="btn btn-outline-succes" data-bs-dismiss="modal">Cancelar</button>
       </div>
     </div>
   </div>

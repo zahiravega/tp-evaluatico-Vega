@@ -90,7 +90,7 @@ p {
 /*RESPONSIVEEEEEEEEEEEEEEEEEE*/
 
 /*pantallas grandes */
-@media(min-width:700px) {
+@media(min-width:600px) {
     mat-toolbar {
         background-color: rgb(33, 9, 138);
     }
@@ -109,7 +109,7 @@ p {
 
 
 /*pantallas chicas*/
-@media(min-width: 300px) and (max-width: 600px) {
+@media(min-width: 300px) and (max-width: 500px) {
     mat-toolbar {
         background-color: rgb(33, 9, 138);
     }

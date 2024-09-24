@@ -15,6 +15,13 @@ import { MediasComponent } from './pages/medias/medias.component';
 import { ProductoComponent } from './pages/productos/productos.component';
 import { BoxersComponent } from './pages/boxers/boxers.component';
 
+//Angular
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 
 @NgModule({
@@ -34,7 +41,12 @@ import { BoxersComponent } from './pages/boxers/boxers.component';
   ],
   imports: [
     CommonModule,
-    ProductoRoutingModule
+    ProductoRoutingModule,
+    MatButtonModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatGridListModule
   ],
   exports:[
     CardComponent,
@@ -48,7 +60,12 @@ import { BoxersComponent } from './pages/boxers/boxers.component';
     ConjuntosComponent,
     MediasComponent,
     ProductoComponent,
-    BoxersComponent
+    BoxersComponent,
+    MatButtonModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatGridListModule
   ]
 })
 export class ProductoModule { }

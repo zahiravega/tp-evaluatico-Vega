@@ -1,6 +1,7 @@
 .contenedor{
     background-color:#21098a;
     height: 210px;
+    margin-top: 20px;
  }
  img{
      height: 10%;
@@ -21,3 +22,5 @@
     font-family: "Lora", serif;
     color: white;
    }
+
+   

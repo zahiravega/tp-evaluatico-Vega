@@ -16,6 +16,10 @@ export class TableComponent {
 
   modalVisibleProducto: boolean = false;
 
+  nombreImagen!: string; // obtendrá el nombre de la imagen
+
+  imagen!: string; // obtendrá la ruta de la imagen
+
   //definimos formulario para los productos
 
   /*
@@ -28,7 +32,7 @@ y atributos numericos (number) se inicializan en 0
     descripcion: new FormControl('', Validators.required),
     descripcion2: new FormControl('', Validators.required),
     categoria: new FormControl('', Validators.required),
-    imagen: new FormControl('', Validators.required),
+    //imagen: new FormControl('', Validators.required),
     alt: new FormControl('', Validators.required),
   })
   constructor(public servicioCrud: CrudService) { }
@@ -46,32 +50,78 @@ y atributos numericos (number) se inicializan en 0
         nombre: this.producto.value.nombre!,
         precio: this.producto.value.precio!,
         descripcion: this.producto.value.descripcion!,
-        descripcion2:this.producto.value.descripcion2!,
+        descripcion2: this.producto.value.descripcion2!,
         categoria: this.producto.value.categoria!,
-        imagen: this.producto.value.imagen!,
+        imagen: '',
         alt: this.producto.value.alt!
       }
-      await this.servicioCrud.crearProducto(nuevoProducto)
-        .then(producto => {
-          alert("Se agrego el nuevo producto con exito")
-        })
+      // Enviamos nombre y url de la imagen; definimos carpeta de imágenes como "productos"
+      await this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
+        .then(resp => {
+          // encapsulamos respuesta y envíamos la información obtenida
+          this.servicioCrud.obtenerUrlImagen(resp)
+            .then(url => {
+              // ahora método crearProducto recibe datos del formulario y URL creada
+              this.servicioCrud.crearProducto(nuevoProducto, url)
+                .then(producto => {
+                  alert("Ha agregado un nuevo producto con éxito.");
 
-        .catch(error => {
-          alert("Ocurrió un error al agregar el producto")
+                  // Resetea el formulario y las casillas quedan vacías
+                  this.producto.reset();
+                })
+                .catch(error => {
+                  alert("Ha ocurrido un error al cargar un producto.");
+
+                  this.producto.reset();
+                })
+            })
         })
     }
   };
 
-  //funcion vinculada al modal y el boton de la tabla
-  mostrarBorrar(productoSeleccionado:Productos){
-    this.modalVisibleProducto=true;
+  // CARGAR IMÁGENES
+  cargarImagen(event: any) {
+    // Variable para obtener el archivo subido desde el input del HTML
+    let archivo = event.target.files[0];
 
-    this.productoSeleccionado=productoSeleccionado;
+    // Variable para crear un nuevo objeto de tipo "archivo" o "file" y leerlo
+    let reader = new FileReader();
+
+    if (archivo != undefined) {
+      /*
+        Llamamos a método readAsDataURL para leer toda la información recibida
+        Envíamos como parámetro al "archivo" porque será el encargador de tener la 
+        info ingresada por el usuario
+      */
+      reader.readAsDataURL(archivo);
+
+      // Definimos qué haremos con la información mediante función flecha
+      reader.onloadend = () => {
+        let url = reader.result;
+
+        // Condicionamos según una URL existente y no "nula"
+        if (url != null) {
+          // Definimos nombre de la imagen con atributo "name" del input
+          this.nombreImagen = archivo.name;
+
+          // Definimos ruta de la imagen según la url recibida
+          this.imagen = url.toString();
+        }
+      }
+    }
+  }
+
+  //funcion vinculada al modal y el boton de la tabla
+  mostrarBorrar(productoSeleccionado: Productos) {
+    this.modalVisibleProducto = true;
+
+    this.productoSeleccionado = productoSeleccionado;
 
   }
 
   borrarProducto(){
-    this.servicioCrud.eliminarProducto(this.productoSeleccionado.idProducto)
+    //ahora enviamos tanto el ID del producto (para identificarlo en firestore) y la url de la imagen (para identificarlo en storage)
+    this.servicioCrud.eliminarProducto(this.productoSeleccionado.idProducto, this.productoSeleccionado.imagen)
     
   .then(respuesta=> {
     alert ("se ha podido eliminar con exito");
@@ -85,7 +135,7 @@ y atributos numericos (number) se inicializan en 0
 
   // EDITAR PRODUCTOS
   // Se envía y llama al momento que tocamos botón "Editar" de la tabla
-  mostrarEditar(productoSeleccionado: Productos){
+  mostrarEditar(productoSeleccionado: Productos) {
     this.productoSeleccionado = productoSeleccionado;
     /*
       Toma los valores del producto seleccionado y los va a
@@ -95,15 +145,15 @@ y atributos numericos (number) se inicializan en 0
       nombre: productoSeleccionado.nombre,
       precio: productoSeleccionado.precio,
       descripcion: productoSeleccionado.descripcion,
-      descripcion2: productoSeleccionado.descripcion,
+      descripcion2: productoSeleccionado.descripcion2,
       categoria: productoSeleccionado.categoria,
-      imagen: productoSeleccionado.imagen,
+    
       alt: productoSeleccionado.alt
     })
   }
 
   // VINCULA A BOTÓN "editarProducto" del modal de "Editar"
-  editarProducto(){
+  editarProducto() {
     let datos: Productos = {
       // Solo idProducto no se modifica por el usuario
       idProducto: this.productoSeleccionado.idProducto,
@@ -114,17 +164,17 @@ y atributos numericos (number) se inicializan en 0
       descripcion: this.producto.value.descripcion!,
       descripcion2: this.producto.value.descripcion2!,
       categoria: this.producto.value.categoria!,
-      imagen: this.producto.value.imagen!,
+      imagen: this.productoSeleccionado.imagen,
       alt: this.producto.value.alt!
     }
 
     // Enviamos al método el id del producto seleccionado y los datos actualizados
     this.servicioCrud.modificarProducto(this.productoSeleccionado.idProducto, datos)
-    .then(producto => {
-      alert("El producto se ha modificado con éxito.");
-    })
-    .catch(error => {
-      alert("Hubo un problema al modificar el producto: \n"+error);
-    })
+      .then(producto => {
+        alert("El producto se ha modificado con éxito.");
+      })
+      .catch(error => {
+        alert("Hubo un problema al modificar el producto: \n" + error);
+      })
   }
 }
