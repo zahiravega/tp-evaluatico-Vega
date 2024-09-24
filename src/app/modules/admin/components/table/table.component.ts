@@ -168,13 +168,41 @@ y atributos numericos (number) se inicializan en 0
       alt: this.producto.value.alt!
     }
 
-    // Enviamos al método el id del producto seleccionado y los datos actualizados
-    this.servicioCrud.modificarProducto(this.productoSeleccionado.idProducto, datos)
-      .then(producto => {
-        alert("El producto se ha modificado con éxito.");
+    //verificamos si el usuario ingresa o no una nueva imagen
+    if(this.imagen){
+      this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
+      .then(resp=>{
+        this.servicioCrud.obtenerUrlImagen(resp)
+        .then(url=>{
+          datos.imagen = url; //actualizamos URL de la imagen en los datos del formulario
+
+          this.actualizarProducto(datos);
+
+          this.producto.reset();
+        })
+        .catch(error =>{
+          alert("hubo un problema al subir la imagen: \n"+error);
+
+          this.producto.reset();
+        })
       })
-      .catch(error => {
-        alert("Hubo un problema al modificar el producto: \n" + error);
-      })
-  }
+    }else{
+      /*
+      actulaizamos formulario con los datos recibidos del usuario, pero sin
+      modificar la imagen ya existente en Firestore y en Storage */
+
+      this.actualizarProducto(datos);
+    }
+}
+//ACTUALIZAR la informacion ya existente de los productos
+actualizarProducto(datos:Productos){
+  // Enviamos al método el id del producto seleccionado y los datos actualizados
+  this.servicioCrud.modificarProducto(this.productoSeleccionado.idProducto, datos)
+  .then(producto => {
+    alert("El producto se ha modificado con éxito.");
+  })
+  .catch(error => {
+    alert("Hubo un problema al modificar el producto: \n"+error);
+  })
+}
 }

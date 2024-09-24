@@ -86,7 +86,12 @@
 
         <div class="mb-3">
           <label for="form-label">Ingrese la imagen del prodcuto</label>
-          <input class="form-control" type="text" formControlName="imagen" placeholder="Ej: url de la imagen">
+          <!--<input class="form-control" type="text" formControlName="imagen" placeholder="Ej:Ingrese ">-->
+          <!--type="archivo"
+          accept= "imagen/*" <- acepte todo tipo de extensiones (img,jpg,jpeg, png, gif)
+          (change)="cargarImagen($event)" <- ejecuta el evento de cargarImagen que definimos en el table.ts
+          -->
+          <input type="file" accept="imagen/*" (change)="cargarImagen($event)">
         </div>
 
         <div class="mb-3">
@@ -164,10 +169,12 @@
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Ingrese una imagen:</label>
-                <input class="form-control" type="text" formControlName="imagen"
-                    placeholder="{{productoEdit.imagen}}">
-            </div>
+              <label class="form-label">Ingrese una imagen:</label>
+              <!--<input class="form-control" type="text" formControlName="imagen"
+                  placeholder="{{productoEdit.imagen}}">-->
+          <input type="file" accept="imagen/*" (change)="cargarImagen($event)">
+          </div>
+
 
             <div class="mb-3">
                 <label class="form-label">Ingrese texto alternativo de la imagen:</label>
