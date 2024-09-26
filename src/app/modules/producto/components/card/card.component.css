@@ -31,6 +31,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    margin-top: 10px;
 
 }
 
@@ -77,11 +78,140 @@ h3 {
     justify-content: space-around;
     flex-direction: row;
     margin: 0;
+    margin-top: 10px;
 }
 
-.col {
+
+
+.chicas {
     display: inline-block;
     justify-content: center;
     margin: 0;
     flex-direction: column;
+}
+
+
+
+
+.toolbar1 {
+    height: 65px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+p {
+    color: black;
+}
+
+.titulo {
+    height: 60px;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav {
+    background-color: #21098a;
+}
+
+.mat {
+    width: 100%;
+}
+
+.tituloo {
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    flex: 10 11;
+}
+
+.barra2 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: 9 9;
+}
+
+.barraproductos {
+    background-color: white;
+    color: black;
+}
+
+.barra {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.search-container {
+    width: 50%;
+}
+
+.search-input-wrapper {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.search-input {
+    width: 40%;
+    height: 40px;
+    padding: 8px 12px;
+    padding-right: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #cccccc00;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.search-input::placeholder {
+    color: #dddddd83;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+    font-size: 16px;
+}
+
+
+.col-lg-4{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 0;
+    margin-top: 10px;
+}
+
+/*RESPONSIVEEEEEEEEEEEEEEEEEE*/
+
+/*pantallas grandes */
+@media(min-width:600px) {
+   
+    #chico{
+        display: none;
+    }
+}
+
+
+
+
+/*pantallas chicas*/
+@media(min-width: 300px) and (max-width: 500px) {
+ 
+    #grande{
+        display: none;
+    }
+
+ 
+   
 }

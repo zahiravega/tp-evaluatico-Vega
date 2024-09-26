@@ -93,6 +93,35 @@ p{
     transform: scaleX(1);
 }
 
+.container2{
+    display: inline-block;
+    justify-content: center;
+    margin: 0;
+    flex-direction: column;
+}
+
+/*pantallas grandes */
+@media(min-width:600px) {
+   
+    #chico{
+        display: none;
+    }
+}
+
+
+
+
+/*pantallas chicas*/
+@media(min-width: 300px) and (max-width: 500px) {
+ 
+    #grande{
+        display: none;
+    }
+
+ 
+   
+}
+
 
 
 

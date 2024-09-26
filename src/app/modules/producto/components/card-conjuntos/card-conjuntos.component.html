@@ -1,5 +1,5 @@
-<div class="row"><!--Card para mostrar todos los productos que el admin ingrese a la base de datos -->
-    <div class="contenido" *ngFor="let producto of coleccionConjuntos">
+<div class="row"><!--Card para mostrar todos los productos que el admin ingrese a la base de datos// pantallas chicas -->
+    <div class="contenido" id="chico" *ngFor="let producto of coleccionConjuntos">
         <div class="card" style="width: 18rem;">
             <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.alt}}">
             <div class="card-body">
@@ -13,6 +13,23 @@
             </div>
         </div>
     </div>
+
+    <!--Card para mostrar todos los productos que el admin ingrese a la base de datos// pantallas grandes -->
+    <div class="col-lg-4" id="grande" *ngFor="let producto of coleccionConjuntos">
+      <div class="card" style="width: 18rem;">
+          <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.alt}}">
+          <div class="card-body">
+  
+              <h2 class="card-title">{{producto.nombre}}</h2>
+              <p class="card-text">${{producto.precio}}</p>
+  
+  
+              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#verMas"
+                  (click)="mostrarVer(producto)">Ver más</button>
+          </div>
+      </div>
+  </div>
+  
     
     <!--Modal para ver más información -->
     

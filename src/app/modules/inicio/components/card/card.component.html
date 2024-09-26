@@ -2,7 +2,90 @@
   @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 </style>
 
-<div class="container">
+<div class="container" id="grande">
+  <div class="row">
+
+    <div class="col">
+
+      <div *ngFor="let i of info" class="contenido">
+
+        <mat-card class="example-card">
+
+          <img mat-card-image src="{{i.imagen}}">
+
+
+
+          <mat-card-header>
+
+            <mat-card-title class="nombre">{{i.nombre}}</mat-card-title>
+
+          </mat-card-header>
+
+          <br>
+
+
+          <mat-card-content>
+
+
+
+            <mat-accordion class="detalles">
+              <mat-expansion-panel class="detalles">
+                <mat-expansion-panel-header class="detalles">
+                  <mat-panel-title> Detalles</mat-panel-title>
+                </mat-expansion-panel-header>
+                <p class="descripcion">
+                  {{i.descripcion2}}
+                </p>
+                <p class="descripcion">
+                  {{i.descripcion}}
+                </p>
+                <mat-card-subtitle class="precio">${{i.precio}}</mat-card-subtitle>
+              </mat-expansion-panel>
+            </mat-accordion>
+
+          </mat-card-content>
+          <mat-card-actions>
+
+            <!--MODAL -->
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn btn-secondary botonn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Añadir al carrito
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">¡ATENCIÓN!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                 
+                  <div class="modal-body">
+                  Para poder agregar este artículo a su carrito debe INICIAR SESION/REGISTRARSE
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" routerLink="/iniciosesion">Iniciar sesion</button>
+                    <button type="button" class="btn btn-secondary" routerLink="/registro">Registrarse</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </mat-card-actions>
+        </mat-card>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container2" id="chico">
   <div class="row">
 
     <div class="col">
