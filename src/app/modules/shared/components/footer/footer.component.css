@@ -1,23 +1,21 @@
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
+/* Estilos del contenedor principal */
 .contenedor {
   background-color: #21098a;
-  height: 210px;
+  padding: 20px;
   margin-top: 20px;
-  position: relative;  /* Cambiado de fixed a relative */
+  text-align: center;
 }
 
 img {
-  height: 10%;
+  height: 100px; /* Tamaño del logo */
+  width: auto;
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Lora", serif;
   color: rgb(255, 244, 244);
+  margin: 5px 0;
 }
 
 p.underline-on-hover:hover {
@@ -27,9 +25,40 @@ p.underline-on-hover:hover {
 h1 {
   font-family: "Lora", serif;
   color: white;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-/* Asegúrate de que el body tenga suficiente contenido para hacer scroll */
-body {
-  padding-bottom: 240px; /* Espacio para que el footer no cubra el contenido */
+/* Alineación del grid en pantallas pequeñas */
+@media (max-width: 600px) {
+  .contenedor {
+    text-align: left;  /* Alineación del contenido en pantallas pequeñas */
+  }
+
+  img {
+    height: 80px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+/* Alineación del grid en pantallas medianas */
+@media (min-width: 601px) and (max-width: 960px) {
+  img {
+    height: 90px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 21px;
+  }
 }

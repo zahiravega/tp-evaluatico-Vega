@@ -1,51 +1,35 @@
 <!-- Contenedor principal -->
 <div class="contenedor">
-
-  <!-- Cuadrícula con 3 columnas y una relación de altura de 4:2 -->
-  <mat-grid-list cols="3" rowHeight="4:2">
-
+  <mat-grid-list [cols]="cols" rowHeight="2:1" gutterSize="16px" id="footer-grid">
     <!-- Primer cuadrícula -->
     <mat-grid-tile>
       <div>
         <h1>NAVEGACIÓN</h1>
-        <!-- Enlaces de navegación con subrayado al pasar el mouse -->
         <p class="underline-on-hover" routerLink="/inicio">Inicio</p>
         <p class="underline-on-hover" routerLink="/productos">Productos</p>
         <p class="underline-on-hover" routerLink="/guia">Guía de talles</p>
       </div>
     </mat-grid-tile>
 
-
-    <mat-grid-tile>
-      <div>
-        <h1>CONTACTANOS</h1>
-        <!-- Enlaces de navegación con subrayado al pasar el mouse -->
-      
-    
-<p class="underline-on-hover" routerLink="/contacto">Contacto</p>
-        <!-- Enlace a la ubicación en Google Maps con dirección -->
-        <a
-          href="https://www.google.com/maps/place/Centro+Educativo+Tecnica+N%C2%BA+30/@-38.9298409,-67.9882264,17z/data=!3m1!4b1!4m6!3m5!1s0x960a30ef2ee4b6b3:0xf60599626c221a60!8m2!3d-38.9298451!4d-67.9856515!16s%2Fg%2F11c0w09lh4?entry=ttu">
-          <p class="underline-on-hover">Paraguay 1050</p>
-        </a>
-
-        <!-- Enlace al número de WhatsApp -->
-        <a href="https://wa.me/+5492995862049">
-          <p class="underline-on-hover">299-5862049</p>
-        </a>
-
-  
-      </div>
-    </mat-grid-tile>
-
     <!-- Segundo cuadrícula -->
     <mat-grid-tile>
       <div>
-        <!-- Imagen del logotipo ubicada en la carpeta de activos (assets) -->
-        <img src="./assets/categorias/LOGO.png" alt="logo">
+        <h1>CONTACTANOS</h1>
+        <p class="underline-on-hover" routerLink="/contacto">Contacto</p>
+        <a href="https://www.google.com/maps">
+          <p class="underline-on-hover">Paraguay 1050</p>
+        </a>
+        <a href="https://wa.me/+5492995862049">
+          <p class="underline-on-hover">299-5862049</p>
+        </a>
       </div>
     </mat-grid-tile>
 
+    <!-- Tercer cuadrícula -->
+    <mat-grid-tile>
+      <div>
+        <img src="./assets/categorias/LOGO.png" alt="logo">
+      </div>
+    </mat-grid-tile>
   </mat-grid-list>
-
 </div>
