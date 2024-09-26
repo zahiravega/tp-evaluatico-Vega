@@ -1,7 +1,7 @@
 <app-titulo-princ></app-titulo-princ>
 <div class="container">
   <div class="row">
-    <mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-list cols="2" rowHeight="1:1" id="grande">
       <!--texto-->
       <mat-grid-tile>
         <div class="contact-section">
@@ -23,8 +23,16 @@
       </mat-grid-tile>
 
       <!--formulario-->
-      <mat-grid-tile>2</mat-grid-tile>
+      <mat-grid-tile>
+       <app-formulario></app-formulario>
+      </mat-grid-tile>
 
     </mat-grid-list>
+ <div class="chico" id="chico">
+    <h2>¿Tienes alguna pregunta o necesitas más información?</h2>
+    <h3>Completa el formulario y nos pondremos en contacto contigo lo antes posible.</h3>
+    <br><br>
+</div>
+
   </div>
 </div>

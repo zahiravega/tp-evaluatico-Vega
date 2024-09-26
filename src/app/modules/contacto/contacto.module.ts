@@ -5,12 +5,14 @@ import { ContactoRoutingModule } from './contacto-routing.module';
 import { ContactoComponent } from './contacto/contacto.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { TituloPrincComponent } from './pages/titulo-princ/titulo-princ.component';
+import { FormularioComponent } from './pages/formulario/formulario.component';
 
 
 @NgModule({
   declarations: [
     ContactoComponent,
-    TituloPrincComponent
+    TituloPrincComponent,
+    FormularioComponent
   ],
   imports: [
     CommonModule,

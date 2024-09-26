@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="form-content">
+        <h2>Enviar formulario</h2>
+        <form action="https://formsubmit.co/zayvega06@gmail.com" method="POST">
+            <label for="name">Nombre y apellido</label>
+            <input type="text" name="name" id="name">
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" id="email">
+
+            <label for="subjet">Asunto</label>
+            <input type="text" name="subjet" id="subjet">
+
+            <label for="comments">Cometarios</label>
+            <textarea name="comments" id="comments" cols="30" rows="3"></textarea>
+
+            <input  class="btn" type="submit" value="Enviar">
+            <input type="hidden" name="_next"  value="http://localhost:4200/contacto">
+            <input type="hidden" name="_captcha"  value="false">
+
+        </form>
+    </div>
+</div>

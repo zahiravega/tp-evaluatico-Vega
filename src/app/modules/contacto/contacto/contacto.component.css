@@ -8,10 +8,38 @@
   line-height: 1.6; /* Espaciado entre líneas */
 }
 
-h1, h2 {
+h1, h2, h3 {
   margin-bottom: 16px; /* Espaciado inferior para títulos */
 }
 
 p {
   margin-bottom: 13px; /* Espaciado inferior para párrafos */
+}
+
+
+/*responsive*/
+
+/*pantallas grandes */
+@media(min-width:600px) {
+
+
+  #chico {
+      display: none;
+  }
+
+  
+
+}
+
+
+
+/*pantallas chicas*/
+@media(min-width: 300px) and (max-width: 500px) {
+ 
+
+  #grande {
+      display: none;
+  }
+
+  
 }
