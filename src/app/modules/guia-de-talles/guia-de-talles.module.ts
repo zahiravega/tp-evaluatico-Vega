@@ -3,15 +3,27 @@ import { CommonModule } from '@angular/common';
 
 import { GuiaDeTallesRoutingModule } from './guia-de-talles-routing.module';
 import { GuiaComponent } from './guia/guia.component';
+import { TableComponent } from './pages/table/table.component';
+import { TableBombComponent } from './pages/table.bomb/table.bomb.component';
+//angular
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
   declarations: [
-    GuiaComponent
+    GuiaComponent,
+    TableComponent,
+    TableBombComponent
   ],
   imports: [
     CommonModule,
-    GuiaDeTallesRoutingModule
+    GuiaDeTallesRoutingModule,
+    MatGridListModule
+  ],
+  exports:[
+    TableComponent,
+    TableBombComponent
   ]
+
 })
 export class GuiaDeTallesModule { }

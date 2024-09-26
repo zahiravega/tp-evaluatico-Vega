@@ -1,0 +1,19 @@
+.table{
+  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+th{
+    background-color: rgba(19, 19, 189, 0.671);
+}
+.container{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

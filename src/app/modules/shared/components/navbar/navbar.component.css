@@ -1,6 +1,7 @@
-.toolbar1{
+.toolbar1 {
     height: 65px;
 }
+
 .example-spacer {
     flex: 1 1 auto;
 }
@@ -22,25 +23,27 @@ p {
 .mat {
     width: 100%;
 }
+
 .tituloo {
     height: 50px;
     text-align: center;
     justify-content: center;
-    flex: 10 11 ;
+    flex: 10 11;
 }
-.barra2{
+
+.barra2 {
     text-align: center;
     justify-content: center;
     align-items: center;
-    flex: 9 9 ;
+    flex: 9 9;
 }
 
-.barraproductos{
+.barraproductos {
     background-color: white;
     color: black;
 }
 
-.barra{
+.barra {
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -49,7 +52,7 @@ p {
 
 
 .search-container {
-    width: 50%; 
+    width: 50%;
 }
 
 .search-input-wrapper {
@@ -64,15 +67,15 @@ p {
     width: 40%;
     height: 40px;
     padding: 8px 12px;
-    padding-right: 40px; 
-    background-color: rgba(255, 255, 255, 0.3); 
+    padding-right: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid #cccccc00;
-    border-radius: 4px; 
+    border-radius: 4px;
     color: #fff;
 }
 
 .search-input::placeholder {
-    color: #dddddd83; 
+    color: #dddddd83;
 }
 
 .search-icon {
@@ -98,10 +101,12 @@ p {
     #menuSecciones {
         display: none;
     }
-    #menuBarraa{
+
+    #menuBarraa {
         display: none;
     }
-    #menuTituloo{
+
+    #menuTituloo {
         display: none;
     }
 }
@@ -113,9 +118,11 @@ p {
     mat-toolbar {
         background-color: rgb(33, 9, 138);
     }
-#toolbar2{
-    display: none;
-}
+
+    #toolbar2 {
+        display: none;
+    }
+
     #menuInicio {
         display: none;
     }
@@ -131,10 +138,12 @@ p {
     #menuContacto {
         display: none;
     }
-    #menuTitulo{
+
+    #menuTitulo {
         display: none;
     }
-    #menuGuia{
+
+    #menuGuia {
         display: none;
     }
 }

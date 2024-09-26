@@ -1,26 +1,35 @@
-.contenedor{
-    background-color:#21098a;
-    height: 210px;
-    margin-top: 20px;
- }
- img{
-     height: 10%;
- }
- p{
-     font-size: 20px;
-     font-family: "Lora", serif;
-     color: rgb(255, 244, 244);
- }
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
- 
-   p.underline-on-hover:hover {
-     text-decoration: underline; 
-   }
- 
+.contenedor {
+  background-color: #21098a;
+  height: 210px;
+  margin-top: 20px;
+  position: relative;  /* Cambiado de fixed a relative */
+}
 
-   h1{
-    font-family: "Lora", serif;
-    color: white;
-   }
+img {
+  height: 10%;
+}
 
-   
+p {
+  font-size: 20px;
+  font-family: "Lora", serif;
+  color: rgb(255, 244, 244);
+}
+
+p.underline-on-hover:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: "Lora", serif;
+  color: white;
+}
+
+/* Asegúrate de que el body tenga suficiente contenido para hacer scroll */
+body {
+  padding-bottom: 240px; /* Espacio para que el footer no cubra el contenido */
+}

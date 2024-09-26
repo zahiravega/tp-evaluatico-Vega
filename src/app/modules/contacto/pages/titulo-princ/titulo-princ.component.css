@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation: centering 2s ease forwards; /* Animación suave para centrar */
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #000000;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0; /* Inicia invisible */
+  animation: typing 3s ease forwards, blink 0.75s step-end infinite;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Animación para la aparición del texto letra por letra de manera fluida */
+@keyframes typing {
+  0% {
+      width: 0;
+      opacity: 1;
+  }
+  100% {
+      width: 100%; /* Expande hasta mostrar todo el texto */
+      opacity: 1;
+  }
+}
+
+/* Animación del parpadeo del cursor */
+@keyframes blink {
+  from {
+      border-right-color: rgba(0,0,0,0.75);
+  }
+  to {
+      border-right-color: transparent;
+  }
+}
+
+/* Animación para suavizar el centrado del contenedor */
+@keyframes centering {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}

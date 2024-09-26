@@ -1,0 +1,17 @@
+
+.container{
+  margin-top: 10px;
+}
+.contact-section {
+  margin: 0 auto; /* Centrar el contenido horizontalmente */
+  padding: 5px; /* Espaciado interno */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+
+h1, h2 {
+  margin-bottom: 16px; /* Espaciado inferior para títulos */
+}
+
+p {
+  margin-bottom: 13px; /* Espaciado inferior para párrafos */
+}

@@ -1,0 +1,21 @@
+.container{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+ 
+/*pantallas garndes*/ 
+@media(min-width:600px) {
+   #tablasChicas{
+    display: none;
+   }
+  }
+
+  
+  /*pantallas chicas*/ 
+  @media(min-width: 300px) and (max-width: 500px) {
+    #tablasGrandes{
+        display: none;
+    }
+  }
