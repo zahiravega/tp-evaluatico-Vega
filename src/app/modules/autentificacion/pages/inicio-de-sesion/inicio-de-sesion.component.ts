@@ -36,6 +36,7 @@ export class InicioDeSesionComponent {
     nombre: '',
     apellido: '',
     email: '',
+    rol:'',
      password: ''
   }
 
@@ -109,7 +110,7 @@ export class InicioDeSesionComponent {
           this.servicioRutas.navigate(['/inicio']);
         }
 
-        
+
         this.servicioRutas.navigate(['/inicio']);
       })
       .catch(err => {
