@@ -14,7 +14,7 @@
 
 /*pantallas chicas*/
 @media(min-width: 300px) and (max-width: 600px) {
-    #menuCarrusel{
+    #carouselExampleAutoplaying{
         display: none;
     }
     #beerre{
@@ -25,7 +25,7 @@
 
 /*pantallas grandes */
 @media(min-width:700px) {
-#menuCarrusel2{
+     #carouselExample{
     display: none;
 }
 

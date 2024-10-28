@@ -1,6 +1,6 @@
-<div class="row"><!--Card para mostrar todos los productos que el admin ingrese a la base de datos -->
+<div class="row chicas" id="chico"><!--Card para mostrar todos los productos que el admin ingrese a la base de datos -->
   <!--pantallas chicas-->
-    <div class="contenido" *ngFor="let producto of coleccionBoxers">
+    <div class="contenido " *ngFor="let producto of coleccionBoxers">
         <div class="card" style="width: 18rem;">
             <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.alt}}">
             <div class="card-body">
@@ -16,6 +16,7 @@
     </div>
 
     <!--pantallas grandes-->
+    <div class="row " id="grande">
     <div class="col-lg-4" *ngFor="let producto of coleccionBoxers">
       <div class="card" style="width: 18rem;">
           <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.alt}}">
@@ -30,6 +31,7 @@
           </div>
       </div>
   </div>
+  </div>
     
     <!--Modal para ver más información -->
     
@@ -41,7 +43,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" >
-              <img src="{{productoSeleccionado.imagen}}" width="250px" height="400px" alt="{{productoSeleccionado.alt}}" >
+              <img src="{{productoSeleccionado.imagen}}" width="250px"  alt="{{productoSeleccionado.alt}}" >
     <br><br>
               <div class="mb-3">
                 {{productoSeleccionado.descripcion}}

@@ -66,6 +66,13 @@ p{
     font-style: normal;
 }
 
+
+mat-card-actions{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
 /*para que el nombre del producto se subraye al señalarlo*/
 
 .nombre {

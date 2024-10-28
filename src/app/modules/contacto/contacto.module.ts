@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { ContactoRoutingModule } from './contacto-routing.module';
 import { ContactoComponent } from './contacto/contacto.component';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -15,6 +14,11 @@ import { FormularioComponent } from './pages/formulario/formulario.component';
     FormularioComponent
   ],
   imports: [
+    CommonModule,
+    ContactoRoutingModule,
+    MatGridListModule
+  ],
+  exports:[
     CommonModule,
     ContactoRoutingModule,
     MatGridListModule

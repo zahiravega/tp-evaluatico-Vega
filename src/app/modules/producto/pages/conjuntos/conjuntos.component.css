@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.titulo{
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 1cm;
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+

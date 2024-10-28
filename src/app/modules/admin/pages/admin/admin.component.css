@@ -5,3 +5,9 @@
     justify-content: center;
     
 }
+h1{
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1cm;
+}

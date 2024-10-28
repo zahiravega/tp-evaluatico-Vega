@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Productos } from 'src/app/models/productos';
 import { CrudService } from '../../services/crud.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+//importacion de sweetalert
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-table',
@@ -64,14 +66,23 @@ y atributos numericos (number) se inicializan en 0
               // ahora método crearProducto recibe datos del formulario y URL creada
               this.servicioCrud.crearProducto(nuevoProducto, url)
                 .then(producto => {
-                  alert("Ha agregado un nuevo producto con éxito.");
+                  Swal.fire({
+                    title: "¡Bien hecho!",
+                    text: "Ha agregado un nuevo producto con éxito",
+                    icon: "success"
+                  });
+                  
 
                   // Resetea el formulario y las casillas quedan vacías
                   this.producto.reset();
                 })
                 .catch(error => {
-                  alert("Ha ocurrido un error al cargar un producto.");
-
+                  Swal.fire({
+                    title: "Ops",
+                    text: "Ha ocurrido un error al cargar un producto",
+                    icon: "error"
+                  });
+                
                   this.producto.reset();
                 })
             })
@@ -124,10 +135,19 @@ y atributos numericos (number) se inicializan en 0
     this.servicioCrud.eliminarProducto(this.productoSeleccionado.idProducto, this.productoSeleccionado.imagen)
     
   .then(respuesta=> {
-    alert ("se ha podido eliminar con exito");
+    Swal.fire({
+      title: "¡Bien hecho!",
+      text: "¡Se ha eliminado con éxito!",
+      icon: "success"
+    });
   })
   .catch(error =>{
-    alert("ha ocurrido un error al eliminar el producto: \n"+error)
+    Swal.fire({
+      title: "Error",
+      text: "Ha ocurrido un error al eliminar el producto:\n"+error ,
+      icon: "error"
+    });
+    
 
   })
   }
@@ -181,7 +201,12 @@ y atributos numericos (number) se inicializan en 0
           this.producto.reset();
         })
         .catch(error =>{
-          alert("hubo un problema al subir la imagen: \n"+error);
+          Swal.fire({
+            title: "Algo salió mal",
+            text: "Ha ocurrido un error al eliminar el producto:\n"+error ,
+            icon: "error"
+          });
+        
 
           this.producto.reset();
         })
@@ -199,10 +224,20 @@ actualizarProducto(datos:Productos){
   // Enviamos al método el id del producto seleccionado y los datos actualizados
   this.servicioCrud.modificarProducto(this.productoSeleccionado.idProducto, datos)
   .then(producto => {
-    alert("El producto se ha modificado con éxito.");
+    Swal.fire({
+      title: "¡Genial!",
+      text: "El producto se ha modificado con éxito!",
+      icon: "success"
+    });
+ 
   })
   .catch(error => {
-    alert("Hubo un problema al modificar el producto: \n"+error);
+    Swal.fire({
+      title: "Error",
+      text: "Ha ocurrido un error al modificar el producto:\n"+error ,
+      icon: "error"
+    });
+  
   })
 }
 }

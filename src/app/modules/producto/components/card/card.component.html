@@ -1,5 +1,9 @@
 <div class="cointaner">
   <div class="row">
+
+    <app-titulo></app-titulo>
+
+    
     <div class="col-lg-12" *ngIf="compraVisible">
       <div class="col-lg-4">
         <div class="card text-bg-info mb-3">
@@ -68,7 +72,7 @@
              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
            </div>
            <div class="modal-body">
-             <img src="{{productoSeleccionado.imagen}}" width="250px" height="400px"
+             <img src="{{productoSeleccionado.imagen}}" width="250px" 
                alt="{{productoSeleccionado.alt}}">
              <br><br>
              <div class="mb-3">

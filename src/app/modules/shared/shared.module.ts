@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { SharedRoutingModule } from './shared-routing.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
@@ -16,6 +14,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
 import { SearchComponent } from './pages/search/search.component';
 
+import { AppRoutingModule } from 'src/app/app-routing.module';
+
 @NgModule({
   declarations: [
     FooterComponent,
@@ -24,7 +24,7 @@ import { SearchComponent } from './pages/search/search.component';
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule,
+    AppRoutingModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,

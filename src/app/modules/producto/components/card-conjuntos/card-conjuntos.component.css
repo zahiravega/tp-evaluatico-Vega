@@ -54,6 +54,10 @@ background-color: rgb(175, 16, 16);
     margin-top: 10px;
 }
 
+.img1{
+    height: 80%;
+}
+
 /*RESPONSIVEEEEEEEEEEEEEEEEEE*/
 
 /*pantallas grandes */
@@ -74,6 +78,6 @@ background-color: rgb(175, 16, 16);
         display: none;
     }
 
- 
+    
    
 }

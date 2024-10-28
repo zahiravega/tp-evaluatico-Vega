@@ -36,8 +36,7 @@ export class InicioDeSesionComponent {
     nombre: '',
     apellido: '',
     email: '',
-    rol: '',
-    password: ''
+     password: ''
   }
 
   //coleccion 'iniciarsesion' para iniciar sesion 
@@ -98,6 +97,19 @@ export class InicioDeSesionComponent {
           icon: "success"
         });
 
+        //almacenamos y enviamos por parametro el rol de los datos de usuario obtenidos 
+        this.servicioAuth.setUsuarioRol(usuarioData.rol);
+        if(usuarioData.rol==="admin"){
+          console.log("Inicio de administrador");
+// si es administrador, redirecciona a la vista de "admin"
+          this.servicioRutas.navigate(['/admin']);
+        }else{
+          console.log("Inicio de visitante");
+// si es de otro tipo de usuario, redirecciona al "inicio"
+          this.servicioRutas.navigate(['/inicio']);
+        }
+
+        
         this.servicioRutas.navigate(['/inicio']);
       })
       .catch(err => {

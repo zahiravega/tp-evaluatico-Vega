@@ -54,6 +54,13 @@ background-color: rgb(175, 16, 16);
     margin-top: 10px;
 }
 
+.chicas {
+    display: inline-block;
+    justify-content: center;
+    margin: 0;
+    flex-direction: column;
+}
+
 /*RESPONSIVEEEEEEEEEEEEEEEEEE*/
 
 /*pantallas grandes */

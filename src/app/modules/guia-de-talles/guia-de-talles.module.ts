@@ -22,7 +22,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
   ],
   exports:[
     TableComponent,
-    TableBombComponent
+    TableBombComponent,
+    CommonModule,
+    GuiaDeTallesRoutingModule,
+    MatGridListModule
   ]
 
 })

@@ -2,3 +2,20 @@
     text-align: center;
     justify-content: center;
 }
+.img-modal{
+    width: 80%;
+}
+.modal-body{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+.titulo{
+    font-family: "Playfair Display", serif;
+    font-size: 0.8cm;
+}
+.modal-title{
+    font-family: "Merriweather", serif;
+    font-size: 00px;
+}

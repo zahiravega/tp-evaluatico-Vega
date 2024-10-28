@@ -21,6 +21,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { TituloComponent } from './pages/titulo/titulo.component';
 
 
 
@@ -37,7 +38,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ConjuntosComponent,
     MediasComponent,
     ProductoComponent,
-    BoxersComponent
+    BoxersComponent,
+    TituloComponent
   ],
   imports: [
     CommonModule,

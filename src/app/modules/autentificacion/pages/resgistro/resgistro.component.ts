@@ -13,6 +13,9 @@ import { FirestoreService } from 'src/app/modules/shared/services/firestore.serv
 //CRYPTO JS
 import * as CryptoJS from 'crypto-js'
 
+//importacion de sweetalert
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-resgistro',
   templateUrl: './resgistro.component.html',
@@ -32,7 +35,7 @@ export class ResgistroComponent {
     nombre: '',
     apellido: '',
     email: '',
-    rol: '',
+    rol: 'visitante', //-> todos los usuarios al registrarse seran visitantes
     password: ''
 
   }
@@ -63,14 +66,23 @@ export class ResgistroComponent {
     const res = await this.servicioAuth.registrar(credenciales.email, credenciales.password)
 
       .then(res => {
-        alert("¡se pudo registrar con exito!");
+        Swal.fire({
+          title: "¡Bien hecho!",
+          text: "Se registró correctamente",
+          icon: "success"
+        });
 
 
         this.servicioRutas.navigate(['/inicio']);
       })
 
       .catch(error => {
-        alert("¡hubo un problema al registrar un nuevo usuario \n" + error);
+
+        Swal.fire({
+          title: "¿Hubo un problema al registrar al usuario!",
+          text: error ,
+          icon: "error"
+        });
       })
 
     const uid = await this.servicioAuth.obtenerUid();
@@ -111,8 +123,8 @@ export class ResgistroComponent {
       nombre: this.usuarios.nombre='',
       apellido: this.usuarios.apellido='',
       email: this.usuarios.email='',
-      rol: this.usuarios.email= '',
-      password: this.usuarios.password='',
+      rol: this.usuarios.rol = 'visitante',
+      password: this.usuarios.password=''
    }
   }
 
