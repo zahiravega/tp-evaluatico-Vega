@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Productos } from 'src/app/models/productos';
 import { CrudService } from 'src/app/modules/admin/services/crud.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-card-medias',
@@ -55,5 +56,11 @@ export class CardMediasComponent {
  
    this.productoSeleccionado=info;
  }
-
+ alert(){
+  Swal.fire({
+    title: "ATENCIÓN",
+    text: "Nuestro carrito está en construcción",
+    icon: "info"
+  });
+}
 }

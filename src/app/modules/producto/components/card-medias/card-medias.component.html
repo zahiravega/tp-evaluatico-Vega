@@ -1,5 +1,9 @@
 <div class="row"><!--Card para mostrar todos los productos que el admin ingrese a la base de datos // pantallas chicas-->
-    <div class="contenido chicas" id="chico" *ngFor="let producto of coleccionMedias">
+  <div class="container2" id="chico">
+    <div class="row">
+      <div class="col">
+    <!--Card para mostrar todos los productos que el admin ingrese a la base de datos  //PANTALLAS CHICAS -->
+    <div class="contenido" *ngFor="let producto of coleccionMedias">
         <div class="card" style="width: 18rem;">
             <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.alt}}">
             <div class="card-body">
@@ -57,7 +61,7 @@
     
             </div>
             <div class="modal-footer">
-                <button type="button" class="boton btn btn-primary" data-bs-dismiss="modal">Agregar al carrito</button>
+                <button type="button" class="boton btn btn-primary" data-bs-dismiss="modal" (click)="alert()">Agregar al carrito</button>
               <button type="button" class="boton2 btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
              
             </div>

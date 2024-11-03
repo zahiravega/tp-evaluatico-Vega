@@ -7,6 +7,19 @@
     font-weight: 400;
     font-style: normal;
 }
+.container2{
+    display: inline-block;
+    justify-content: center;
+    margin: 0;
+    flex-direction: column;
+}
+.contenido{
+    width: 22rem;
+    display: inline-block;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 15px;
+}
 
 .modal-title{
     justify-content: center;

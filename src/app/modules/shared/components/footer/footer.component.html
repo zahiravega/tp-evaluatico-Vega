@@ -1,5 +1,5 @@
-<!-- Contenedor principal -->
-<div class="contenedor">
+<!-- Contenedor principal // PANTALLAS GRANDES  -->
+<div class="contenedor" id="grande">
   <mat-grid-list [cols]="cols" rowHeight="2:1" gutterSize="16px" id="footer-grid">
     <!-- Primer cuadrícula -->
     <mat-grid-tile class="cuadricula">
@@ -14,7 +14,7 @@
     <!-- Segundo cuadrícula -->
     <mat-grid-tile  class="cuadricula">
       <div>
-        <h1>CONTACTANOS</h1>
+        <h1>CONTÁCTANOS</h1>
         <p class="underline-on-hover" routerLink="/contacto">Contacto</p>
         <a href="https://www.google.com/maps">
           <p class="underline-on-hover">Paraguay 1050</p>
@@ -32,4 +32,41 @@
       </div>
     </mat-grid-tile>
   </mat-grid-list>
+</div>
+
+
+
+
+<!--FOOTER PANTALLAS CHICAS -->
+
+<div class="contenedor2" id="chico">
+  <mat-grid-list cols="2" rowHeight="2:2">
+    <mat-grid-tile> 
+      <div>
+      <h1 class="h1">NAVEGACIÓN</h1>
+      <p class="underline-on-hover p" routerLink="/inicio">Inicio</p>
+      <p class="underline-on-hover p" routerLink="/productos">Productos</p>
+      <p class="underline-on-hover p" routerLink="/guia">Guía de talles</p>
+    </div>
+  </mat-grid-tile>
+  
+
+    <mat-grid-tile>
+      <div>
+        <h1 class="h1" >CONTÁCTANOS</h1>
+        <p class="underline-on-hover p" routerLink="/contacto">Contacto</p>
+        <a href="https://www.google.com/maps">
+          <p class="underline-on-hover p">Paraguay 1050</p>
+        </a>
+        <a href="https://wa.me/+5492995862049">
+          <p class="underline-on-hover p">299-5862049</p>
+        </a>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+    <img class="imagen" src="./assets/categorias/LOGO.png" alt="logo">
+
+
+
 </div>

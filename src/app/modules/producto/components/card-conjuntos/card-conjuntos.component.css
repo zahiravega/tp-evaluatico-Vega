@@ -33,6 +33,19 @@
     background-color: rgb(28, 28, 184);
 }
 
+.container2{
+    display: inline-block;
+    justify-content: center;
+    margin: 0;
+    flex-direction: column;
+}
+.contenido{
+    width: 22rem;
+    display: inline-block;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 15px;
+}
 .btn{
     background-color: rgb(28, 28, 184);
     color: white;

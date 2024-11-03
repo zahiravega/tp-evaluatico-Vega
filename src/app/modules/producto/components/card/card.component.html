@@ -6,27 +6,12 @@
   
 
     
-    <div class="col-lg-12" *ngIf="compraVisible">
-      <div class="col-lg-4">
-        <div class="card text-bg-info mb-3">
-          <ul class="list-group">
 
-            <h3>Ultima compra:</h3>
-
-            <li class="list-group-item">
-              {{productoReciente}}
-            </li>
-
-          </ul>
-
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row chicas" id="chico">
+    <div class="container2" id="chico">
+      <div class="row">
+        <div class="col">
       <!--Card para mostrar todos los productos que el admin ingrese a la base de datos  //PANTALLAS CHICAS -->
-      <div class="container" *ngFor="let producto of coleccionProductos">
+      <div class="contenido" *ngFor="let producto of coleccionProductos">
         <div class="card" style="width: 18rem;">
           <img src="{{producto.imagen}}" class="card-img-top" alt="{{producto.alt}}">
           <div class="card-body">
@@ -41,6 +26,10 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+    
+
 
     <div class="row " id="grande">
       <!--Card para mostrar todos los productos que el admin ingrese a la base de datos  //PANTALLAS GRANDES -->
@@ -94,7 +83,7 @@
            </div>
            <div class="modal-footer">
              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal"
-               (click)="agregarProducto(productoSeleccionado)">Agregar</button>
+               (click)="alert()"> Agregar al carrito </button>
              <button type="button" class="boton2 btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
 
            </div>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 //importo interfaz productos
 import { Productos } from 'src/app/models/productos';
+import Swal from 'sweetalert2';
 
 
 
@@ -91,4 +92,11 @@ export class CardComponent {
     ]
   }
 
+  alert(){
+    Swal.fire({
+      title: "ATENCIÓN",
+      text: "Nuestro carrito está en construcción",
+      icon: "info"
+    });
+  }
 }

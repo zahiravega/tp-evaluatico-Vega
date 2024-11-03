@@ -4,12 +4,40 @@
   padding: 20px;
   margin-top: 20px;
   text-align: center;
+
+}
+
+.contenedor2{
+  background-color: #21098a;
+  text-align: center;
+  height: 300px;
+
 }
 
 img {
   height: 100px; /* Tamaño del logo */
   width: auto;
 }
+
+.imagen{
+  width: auto;
+  height: 90px;
+
+}
+
+.h1{
+  font-size: 18px;
+  font-family: "Lora", serif;
+  color: rgb(255, 244, 244);
+}
+.p{
+  font-size: 13px;
+  font-family: "Lora", serif;
+  color: rgb(255, 244, 244);
+}
+
+
+
 
 p {
   font-size: 18px;
@@ -22,6 +50,10 @@ p.underline-on-hover:hover {
   text-decoration: underline;
 }
 
+.cuadriculaa{
+  width: 250px;
+}
+
 h1 {
   font-family: "Lora", serif;
   color: white;
@@ -29,35 +61,19 @@ h1 {
   margin-bottom: 10px;
 }
 
-/* Alineación del grid en pantallas pequeñas */
-@media (max-width: 600px) {
-  .contenedor {
-    text-align: left;  /* Alineación del contenido en pantallas pequeñas */
-  }
-  img {
-    height: 80px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
+/* pantallas grandes */
+@media (min-width: 600px) {
+#chico{
+  display: none;
+}
 }
 
-/* Alineación del grid en pantallas medianas */
-@media (min-width: 601px) and (max-width: 960px) {
-  img {
-    height: 90px;
-  }
+/* pantallas chicas */
+@media(min-width: 300px) and (max-width: 500px) {
 
-  p {
-    font-size: 17px;
+  #grande{
+    display: none;
   }
+ 
 
-  h1 {
-    font-size: 21px;
-  }
 }

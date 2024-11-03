@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { Productos } from 'src/app/models/productos';
 import { CrudService } from 'src/app/modules/admin/services/crud.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-card',
@@ -45,10 +46,12 @@ export class CardComponent {
     this.productoSeleccionado =info; 
   }
 
- agregarProducto(info : Productos){
-  this.productoAgregado.emit(info);
-
-  this.compraVisible= true;
- }
+alert(){
+  Swal.fire({
+    title: "ATENCIÓN",
+    text: "Nuestro carrito está en construcción",
+    icon: "info"
+  });
+}
 
 }
