@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/modules/autentificacion/services/auth.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-navbar',
@@ -34,5 +35,20 @@ export class NavbarComponent {
       this.servicioRutas.navigate(['/']);
     }
 
+    alert(){
+      Swal.fire({
+        title: "ATENCIÓN",
+        text: "Barra de búsqueda en construcción",
+        icon: "info"
+      });
+    }
+
+    carrito(){
+      Swal.fire({
+        title: "ATENCIÓN",
+        text: "Carrito en construcción",
+        icon: "info"
+      });
+    }
 
 }

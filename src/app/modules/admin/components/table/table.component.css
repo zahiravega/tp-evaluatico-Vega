@@ -13,13 +13,18 @@
 }
 .titulo{
     font-family: "Playfair Display", serif;
-    font-size: 0.8cm;
+    font-size: 0.5cm;
 }
 .modal-title{
     font-family: "Merriweather", serif;
     font-size: 00px;
 }
 
+.container{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 
 /* responsive*/
 
@@ -41,68 +46,62 @@
     height: auto;
   }
   
-  /* Estilos responsive para pantallas pequeñas */
-  @media(min-width: 300px) and (max-width: 600px) {
-    .table {
-      width: 100%; /* Ocupar todo el ancho de la pantalla */
-      overflow-x: auto; /* Habilitar scroll horizontal si es necesario */
-      white-space: nowrap; /* Evitar que las celdas se partan en varias líneas */
-      border-collapse: separate;
-      margin: 0 auto; /* Centrar la tabla en la pantalla */
-    }
-  
-    /* Cada fila se convierte en un bloque para dispositivos móviles */
-    .table tbody tr {
-      width: 100%;
-      margin-bottom: 10px;
-      border: 1px solid #ddd;
-      padding: 15px; /* Añadir padding para una separación prolija */
-      background-color: #f9f9f9; /* Fondo claro para mayor claridad */
-      border-radius: 8px; /* Esquinas redondeadas */
-    }
-  
-    .table tbody tr td {
-      display: block;
-      text-align: center; /* Centrar el contenido de cada celda */
-      padding: 10px;
-      border: none;
-      border-bottom: 1px solid #ddd;
-      position: relative;
-      width: 100%;
-      box-sizing: border-box; /* Asegurarse de que las celdas no se desborden */
-    }
-  
-    .table tbody tr td::before {
-      content: attr(data-label);
-      position: absolute;
-      left: 10px;
-      top: 10px;
-      font-weight: bold;
-      text-align: left;
-      color: #555; /* Color del texto del label */
-    }
-  
-    .table tbody tr td:last-child {
-      border-bottom: none;
-    }
-  
-    /* Ajustar imágenes en dispositivos móviles */
-    .table tbody tr td img {
-      max-width: 90px; /* Reducir un poco más el tamaño de las imágenes */
-      margin: 0 auto;
-      display: block; /* Centrar las imágenes */
-      border-radius: 5px;
-    }
-  
-    /* Ocultar encabezado en pantallas pequeñas */
-    .table thead {
-      display: none;
-    }
-  
-    /* Centrar botones de acciones */
-    .table tbody tr td button {
-      display: inline-block;
-      margin: 5px auto; /* Espaciado y centrado de botones */
-    }
+
+  /*pantallas grandes */
+@media(min-width:600px) {
+
+
+
+
+}
+
+
+/* Pantallas chicas */
+@media (min-width: 300px) and (max-width: 500px) {
+  .table-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
   }
-  
+
+  .table, .table thead, .table tbody, .table th, .table td, .table tr {
+    display: block;
+    width: 90%;
+    margin: 0 auto; /* Centra la tabla en pantallas pequeñas */
+  }
+
+  .table thead tr {
+    display: none; /* Oculta la cabecera en dispositivos pequeños */
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table td {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    text-align: center;
+    align-items: center;
+    padding: 8px 10px;
+    font-size: 14px; /* Reduce el tamaño de fuente para móviles */
+  }
+
+  .table td::before {
+    content: attr(data-label); /* Usa el atributo data-label para las etiquetas */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0044cc;
+    margin-right: 10px;
+  }
+
+  .table img {
+    width: 80px; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+  }
+}
+
+
+
+
+

@@ -31,6 +31,9 @@ const routes: Routes = [
     path: "", loadChildren:()=> import('./modules/admin/admin.module').then(m => m.AdminModule),
     //deifinirle al guardian que proteja la ruta de ADMIN y que espere un rol de tipo ADMIN
     canActivate:[rutaProtegidaGuard],data:{ role:'admin'}
+  },
+  {
+    path:"", loadChildren:()=> import('./modules/carrito/carrito.module').then(m => m.CarritoModule)
   }
 
 

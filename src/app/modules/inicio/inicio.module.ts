@@ -14,6 +14,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCardModule,
     MatExpansionModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ],
   exports:[
     MatButtonModule,
@@ -40,7 +42,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCardModule,
     MatExpansionModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ]
 })
 export class InicioModule { }

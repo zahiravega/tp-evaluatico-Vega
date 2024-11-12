@@ -22,6 +22,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { TituloComponent } from './pages/titulo/titulo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -48,7 +49,9 @@ import { TituloComponent } from './pages/titulo/titulo.component';
     MatCardModule,
     MatExpansionModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     CardComponent,
@@ -67,7 +70,8 @@ import { TituloComponent } from './pages/titulo/titulo.component';
     MatCardModule,
     MatExpansionModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    
   ]
 })
 export class ProductoModule { }

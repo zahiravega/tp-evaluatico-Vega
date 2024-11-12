@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './modules/shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 //importaciones de FIREBASE (herramientas de la base de datos)
 import { enviroment } from 'src/enviroments/enviroment';// vincula la bd a la app
@@ -29,10 +30,14 @@ import {AngularFireStorageModule} from '@angular/fire/compat/storage';// trabaja
     //componentes globales
     SharedModule,
     
+    FormsModule, // Asegúrate de importar FormsModule para ngModel
     //vinculacion con firebase
     AngularFireModule.initializeApp(enviroment.firebaseConfig), //inicializar firebase dentro del proyecto
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+  
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

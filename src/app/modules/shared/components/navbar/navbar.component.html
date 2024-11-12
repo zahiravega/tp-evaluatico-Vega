@@ -3,8 +3,8 @@
     <!--ITEM 1-->
     <!--LOGO, BARRA DE BUSQUEDA, INICIO SESION, REGISTARSE Y CARRITO -->
 
-    <mat-list-item>
-      <mat-toolbar class="toolbar1">
+    <mat-list-item id="toolbar1">
+      <mat-toolbar>
 
 
         <!--menu desplegable para pantallas chicas (pantalla menor a 700px)-->
@@ -30,10 +30,8 @@
         <!--NOMBRE PANTALLAS CHICAS-->
         <img id="menuTituloo" class="tituloo" routerLink="/inicio" src="./assets/categorias/LOGO.png" alt="logo">
 
-
-
-
-        <!--BARRA DE BUSQUEDA PANTALLAS GRANDES-->
+        
+        <!--BARRA DE BUSQUEDA PANTALLAS GRANDES// sACAR SI NO FUNCIONA-->
 
         <div class="search-input-wrapper" id="menuBarra">
           <input type="search" class="search-input" placeholder="Buscar" aria-label="Buscar">
@@ -41,11 +39,45 @@
           <span class="search-icon"><i class="fas fa-search"></i></span>
 
         </div>
+<!--DESCOMENTAR SI La barra de busqueda no funciona-->
+       <!-- <span></span>
+        <span class="example-spacer"></span>
+        <span></span>
+        <span class="example-spacer"></span> -->
 
+        <!--BOTON INICIO-->
+       <!-- <button id="menuInicio" mat-button routerLink="/inicio">Inicio </button>-->
+
+
+
+        <!--BARRA DE PRODUCTOS-->
+
+        <!--<button id="menuProductos" mat-button [matMenuTriggerFor]="productos">Productos</button>
+        <mat-menu #productos="matMenu">
+          <button mat-menu-item routerLink="/conjuntos">Conjuntos</button>
+          <button mat-menu-item routerLink="/corpiños">Corpiños</button>
+          <button mat-menu-item routerLink="/bombachas">Bombachas</button>
+          <button mat-menu-item routerLink="/medias">Medias</button>
+          <button mat-menu-item routerLink="/boxers">Boxers</button>
+          <button mat-menu-item routerLink="/productos">Ver todos los productos</button>
+        </mat-menu>-->
+
+
+        <!--BOTON  CONTACTO  -->
+        <!--<div class="example-button-row">
+          <button id="menuContacto" mat-button routerLink="/contacto">Contacto</button>
+        </div>
+
+        <div class="example-button-row">
+          <button id="menuGuia" mat-button routerLink="/guia">Guia de talles</button>
+        </div>
+
+        <div class="example-button-row">
+          <button id="menuAdmin" mat-button routerLink="/admin">Admin</button>
+        </div>
 
         <span></span>
-        <span class="example-spacer"></span>
-
+        <span></span> -->
 
         <!--BOTON CUENTAS-->
         <button mat-icon-button [matMenuTriggerFor]="usuario">
@@ -60,25 +92,15 @@
 
         <div class="example-button-row">
           <!--BOTON DE CARRITO-->
-          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+           routerLink="/carrito">
             <mat-icon>shopping_cart</mat-icon>
           </button>
         </div>
-
-        <!--BOTON DE BARRA DE BUSQUEDA PANTALLAS CHICAS-->
-
-        <div class="example-button-row" id="menuBarraa">
-          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
-            routerLink="/search">
-            <mat-icon>search</mat-icon>
-          </button>
-        </div>
-
-
-
       </mat-toolbar>
 
     </mat-list-item>
+
     <mat-divider></mat-divider>
 
     <!--item 2-->
@@ -120,5 +142,7 @@
 
       </mat-toolbar>
     </mat-list-item>
+
+
   </mat-list>
 </div>

@@ -35,7 +35,7 @@ export class ResgistroComponent {
     nombre: '',
     apellido: '',
     email: '',
-    rol: 'visitante', //-> todos los usuarios al registrarse seran visitantes
+    rol: 'usuario', //-> todos los usuarios al registrarse seran usuario
     password: ''
 
   }
@@ -123,7 +123,7 @@ export class ResgistroComponent {
       nombre: this.usuarios.nombre='',
       apellido: this.usuarios.apellido='',
       email: this.usuarios.email='',
-      rol: this.usuarios.rol = 'visitante',
+      rol: this.usuarios.rol = 'usuario',
       password: this.usuarios.password=''
    }
   }

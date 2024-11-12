@@ -36,6 +36,7 @@ y atributos numericos (number) se inicializan en 0
     categoria: new FormControl('', Validators.required),
     //imagen: new FormControl('', Validators.required),
     alt: new FormControl('', Validators.required),
+   stock: new FormControl(0, Validators.required),
   })
   constructor(public servicioCrud: CrudService) { }
 
@@ -55,7 +56,8 @@ y atributos numericos (number) se inicializan en 0
         descripcion2: this.producto.value.descripcion2!,
         categoria: this.producto.value.categoria!,
         imagen: '',
-        alt: this.producto.value.alt!
+        alt: this.producto.value.alt!,
+        stock:this.producto.value.stock!
       }
       // Enviamos nombre y url de la imagen; definimos carpeta de imágenes como "productos"
       await this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
@@ -168,7 +170,8 @@ y atributos numericos (number) se inicializan en 0
       descripcion2: productoSeleccionado.descripcion2,
       categoria: productoSeleccionado.categoria,
     
-      alt: productoSeleccionado.alt
+      alt: productoSeleccionado.alt,
+      stock: productoSeleccionado.stock,
     })
   }
 
@@ -185,7 +188,8 @@ y atributos numericos (number) se inicializan en 0
       descripcion2: this.producto.value.descripcion2!,
       categoria: this.producto.value.categoria!,
       imagen: this.productoSeleccionado.imagen,
-      alt: this.producto.value.alt!
+      alt: this.producto.value.alt!,
+      stock:this.producto.value.stock!,
     }
 
     //verificamos si el usuario ingresa o no una nueva imagen

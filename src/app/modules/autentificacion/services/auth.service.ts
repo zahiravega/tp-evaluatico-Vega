@@ -57,10 +57,21 @@ export class AuthService {
     }
 
   }
-
+  // FUNCIÓN PARA OBTENER EMAIL
   obtenerUsuario(email:string){
+     /**
+     * Retornamos del servicioFirestore la colección de 'usuarios', buscamos una referencia en los email registrados
+     * y los comparamos con los que ingrese el usuario al iniciar sesión, y lo obtiene con el '.get()'
+     * Lo vuelve una promesa => da un resultado RESUELTO o RECHAZADO
+     */
     return this.servicioFirestore.collection("usuarios", ref=> ref.where('email','==',email)).get().toPromise();
   }
+
+  //FINCIÒN PARA RECUPERAR TOKEN (USADA PARA EL BOTON DE VER TODOS LOS PRODUCTOS)
+
+obtenerToken(){
+  return localStorage.getItem('token');
+}
 
   //funcion para obtener el rol del usuario
 obtenerRol( uid:string):Observable<string | null > { 

@@ -1,6 +1,4 @@
-.toolbar1 {
-    height: 65px;
-}
+
 
 .example-spacer {
     flex: 1 1 auto;
@@ -11,13 +9,16 @@ p {
 }
 
 .titulo {
-    height: 60px;
+    height: 73px;
+    width: auto;
     text-align: center;
     justify-content: center;
+    margin-left: 13px;
 }
 
 .nav {
     background-color: #21098a;
+    margin-bottom: 0;
 }
 
 .mat {
@@ -25,7 +26,7 @@ p {
 }
 
 .tituloo {
-    height: 50px;
+    height: 60px;
     text-align: center;
     justify-content: center;
     flex: 10 11;
@@ -48,8 +49,6 @@ p {
     justify-content: center;
     align-items: center;
 }
-
-
 
 .search-container {
     width: 50%;
@@ -90,6 +89,10 @@ p {
 
 
 
+
+
+
+
 /*RESPONSIVEEEEEEEEEEEEEEEEEE*/
 
 /*pantallas grandes */
@@ -97,7 +100,9 @@ p {
     mat-toolbar {
         background-color: rgb(33, 9, 138);
     }
-
+#toolbar1{
+    height: 75px;
+}
     #menuSecciones {
         display: none;
     }
@@ -109,6 +114,7 @@ p {
     #menuTituloo {
         display: none;
     }
+    
 }
 
 
@@ -144,6 +150,15 @@ p {
     }
 
     #menuGuia {
+        display: none;
+    }
+    #menuContacto{
+        display:none;
+    }
+    #menuGuia{
+        display: none;
+    }
+    #menuAdmin{
         display: none;
     }
 }

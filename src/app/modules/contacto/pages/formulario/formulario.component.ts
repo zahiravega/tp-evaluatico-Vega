@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class FormularioComponent {
 
+  alert(){
+    Swal.fire({
+      title: "¡Gmail enviado!",
+      text: "¡Intentaremos enviarte una respuesta lo antes posible!",
+      icon: "success"
+    });
+}
 }

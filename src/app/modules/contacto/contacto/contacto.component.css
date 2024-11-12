@@ -12,7 +12,18 @@ h1, h2, h3 {
   margin-bottom: 16px; /* Espaciado inferior para títulos */
 }
 
+.h1{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.pe{
+  font-family: "Playfair Display", serif;
+ font-size: 1cm;
+}
 p {
+  font-size: 0.4cm;
   margin-bottom: 13px; /* Espaciado inferior para párrafos */
 }
 

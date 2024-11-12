@@ -7,5 +7,6 @@ export interface Productos {
     imagen: string;
     alt:string;
     categoria: string;
+    stock: number;
 
 }
