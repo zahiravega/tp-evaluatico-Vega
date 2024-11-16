@@ -31,88 +31,17 @@
         <img id="menuTituloo" class="tituloo" routerLink="/inicio" src="./assets/categorias/LOGO.png" alt="logo">
 
         
-        <!--BARRA DE BUSQUEDA PANTALLAS GRANDES// sACAR SI NO FUNCIONA-->
+        <!--BARRA DE BUSQUEDA PANTALLAS GRANDES-->
 
-        <div class="search-input-wrapper" id="menuBarra">
-          <input type="search" class="search-input" placeholder="Buscar" aria-label="Buscar">
-
-          <span class="search-icon"><i class="fas fa-search"></i></span>
-
-        </div>
-<!--DESCOMENTAR SI La barra de busqueda no funciona-->
-       <!-- <span></span>
+        <span></span>
         <span class="example-spacer"></span>
-        <span></span>
-        <span class="example-spacer"></span> -->
-
-        <!--BOTON INICIO-->
-       <!-- <button id="menuInicio" mat-button routerLink="/inicio">Inicio </button>-->
-
-
-
-        <!--BARRA DE PRODUCTOS-->
-
-        <!--<button id="menuProductos" mat-button [matMenuTriggerFor]="productos">Productos</button>
-        <mat-menu #productos="matMenu">
-          <button mat-menu-item routerLink="/conjuntos">Conjuntos</button>
-          <button mat-menu-item routerLink="/corpiños">Corpiños</button>
-          <button mat-menu-item routerLink="/bombachas">Bombachas</button>
-          <button mat-menu-item routerLink="/medias">Medias</button>
-          <button mat-menu-item routerLink="/boxers">Boxers</button>
-          <button mat-menu-item routerLink="/productos">Ver todos los productos</button>
-        </mat-menu>-->
-
-
-        <!--BOTON  CONTACTO  -->
-        <!--<div class="example-button-row">
-          <button id="menuContacto" mat-button routerLink="/contacto">Contacto</button>
-        </div>
-
-        <div class="example-button-row">
-          <button id="menuGuia" mat-button routerLink="/guia">Guia de talles</button>
-        </div>
-
-        <div class="example-button-row">
-          <button id="menuAdmin" mat-button routerLink="/admin">Admin</button>
-        </div>
-
-        <span></span>
-        <span></span> -->
-
-        <!--BOTON CUENTAS-->
-        <button mat-icon-button [matMenuTriggerFor]="usuario">
-          <mat-icon>person</mat-icon>
-        </button>
-        <mat-menu #usuario="matMenu">
-          <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
-          <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/iniciosesion">Iniciar sesion</button>
-          <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar sesión</button>
-        </mat-menu>
-
-
-        <div class="example-button-row">
-          <!--BOTON DE CARRITO-->
-          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
-           routerLink="/carrito">
-            <mat-icon>shopping_cart</mat-icon>
-          </button>
-        </div>
-      </mat-toolbar>
-
-    </mat-list-item>
-
-    <mat-divider></mat-divider>
-
-    <!--item 2-->
-    <!-- BOTON INICIO, BARRA DE PRODUCTOS, CONTACTO-->
-
-    <mat-list-item id="toolbar2">
-      <mat-toolbar>
         <span></span>
         <span class="example-spacer"></span>
 
         <!--BOTON INICIO-->
-        <button id="menuInicio" mat-button routerLink="/inicio">Inicio </button>
+      <button id="menuInicio" mat-button routerLink="/inicio">Inicio </button>
+
+
 
         <!--BARRA DE PRODUCTOS-->
 
@@ -140,8 +69,33 @@
           <button id="menuAdmin" mat-button routerLink="/admin">Admin</button>
         </div>
 
+        <span></span>
+        <span></span> 
+
+        <!--BOTON CUENTAS-->
+        <button mat-icon-button [matMenuTriggerFor]="usuario">
+          <mat-icon>person</mat-icon>
+        </button>
+        <mat-menu #usuario="matMenu">
+          <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
+          <button mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/iniciosesion">Iniciar sesion</button>
+          <button mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar sesión</button>
+        </mat-menu>
+
+
+        <div class="example-button-row">
+          <!--BOTON DE CARRITO-->
+          <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+           routerLink="/carrito">
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+        </div>
       </mat-toolbar>
+
     </mat-list-item>
+
+    
+    
 
 
   </mat-list>

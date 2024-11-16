@@ -11,7 +11,8 @@ import { AuthService } from 'src/app/modules/autentificacion/services/auth.servi
 export class PedidoComponent {
 
 coleccionPedidos: Pedido[] =[];
-//el constructor es para las clases que son los objetos, para angular son los servicios que va a utilizar para funcionar bien
+//el constructor es para las clases que son los objetos, 
+//para angular son los servicios que va a utilizar para funcionar bien
 
 constructor(
   public servicioCarrito:CarritoService,
@@ -32,8 +33,10 @@ ngOnInit(){
             this.servicioCarrito.obtenerCarrito().subscribe(productos => 
               this.coleccionPedidos = productos
             )
+            
           }else{
             console.error('No se obtuvo el usuario de manera correcta');
+            
           }
         }
       )

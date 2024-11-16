@@ -1,0 +1,32 @@
+.container{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+}
+
+h1{
+    margin-top: 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 1cm;
+}
+.boton{
+    background-color: #8570b4 ;
+    color: antiquewhite;
+    text-decoration: none; /* Quita el subrayado */
+}
+
+/* Estilo para el enlace dentro del botón */
+.btn.boton a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de la fuente */
+    display: inline-block; /* Para que se alinee como texto dentro del botón */
+  }
+
+
+
+.booton{
+    background-color: #b36262 ;
+    color: antiquewhite;
+}

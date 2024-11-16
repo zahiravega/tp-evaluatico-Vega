@@ -33,7 +33,7 @@ export class CardComponent {
 
   constructor(
     public servicioCrud:CrudService,
-    public servicioCarrito: CarritoService //Aca el servicio carrito llana a carritoservice
+    public servicioCarrito: CarritoService //Aca el servicio carrito llama a carritoservice
   ){}
 
   ngOnInit():void{

@@ -5,6 +5,7 @@ import { CarritoRoutingModule } from './carrito-routing.module';
 import { PedidoComponent } from './components/pedido/pedido.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -16,14 +17,16 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     CarritoRoutingModule,
     MatIconModule,
-    FormsModule,ReactiveFormsModule
+    FormsModule,ReactiveFormsModule,
+    MatGridListModule
   
     
   ],
   exports:[
     MatIconModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    MatGridListModule 
   ]
 })
 export class CarritoModule { }

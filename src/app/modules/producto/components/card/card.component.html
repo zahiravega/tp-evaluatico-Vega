@@ -87,7 +87,8 @@
 
            <!--BOTON DE CARRITO  -->
            <p>Ingrese la cantidad de productos que desea</p>
-           <input type="number" placeholder="Cantidad deseada del producto" [(ngModel)]="stock">
+           
+           <input type="number" placeholder="Cantidad deseada del producto" [(ngModel)]="stock" class="input" id="input">
            <div class="modal-footer">
              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal" (click)="agregarProducto(productoSeleccionado)"> Agregar al carrito </button>
              <button type="button" class="boton2 btn btn-danger" data-bs-dismiss="modal">Cerrar</button>

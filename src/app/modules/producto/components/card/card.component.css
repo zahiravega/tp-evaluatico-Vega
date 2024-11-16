@@ -95,6 +95,12 @@ h3 {
     margin: 15px;
 }
 
+.input{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 70%;
+}
 
 .chicas {
     display: inline-block;
@@ -213,6 +219,10 @@ p {
     #chico{
         display: none;
     }
+    #input{
+        margin-left: 80px;
+    
+    }
 }
 
 
@@ -223,6 +233,10 @@ p {
  
     #grande{
         display: none;
+    }
+
+    #input{
+        margin-left: 60px;
     }
 
  
