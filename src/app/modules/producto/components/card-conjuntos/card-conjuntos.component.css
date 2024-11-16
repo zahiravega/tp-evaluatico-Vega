@@ -71,13 +71,24 @@ background-color: rgb(175, 16, 16);
     height: 80%;
 }
 
-/*RESPONSIVEEEEEEEEEEEEEEEEEE*/
+.input{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 70%;
+}
+
+/*RESPONSIVE*/
 
 /*pantallas grandes */
 @media(min-width:600px) {
    
     #chico{
         display: none;
+    }
+    #input{
+        margin-left: 80px;
+    
     }
 }
 
@@ -90,7 +101,9 @@ background-color: rgb(175, 16, 16);
     #grande{
         display: none;
     }
-
+    #input{
+        margin-left: 60px;
+    }
     
    
 }

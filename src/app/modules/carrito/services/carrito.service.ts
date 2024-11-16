@@ -18,7 +18,6 @@ export class CarritoService {
     idPedido: '',
     productos: {
       
-     
       idProducto: '',
       nombre: '',
       descripcion: '',
