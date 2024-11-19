@@ -5,5 +5,4 @@ export interface Pedido {
     productos:Productos;
     cantidad:number;
     total:number;
-    
 }

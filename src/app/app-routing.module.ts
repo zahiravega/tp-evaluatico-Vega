@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './modules/inicio/components/inicio/inicio.component';
+
 //guardian para la vista del administrador 
 import { rutaProtegidaGuard } from './guards/ruta-protegida.guard';
 import { rutaProtegidaCarritoGuard } from './guards/ruta-protegida-carrito.guard';
@@ -39,7 +40,7 @@ const routes: Routes = [
   {
     path:"", loadChildren:()=> import('./modules/carrito/carrito.module').then(m => m.CarritoModule),
     //deifinirle al guardian que proteja la ruta de ADMIN y que espere un rol de tipo ADMIN
-    canActivate:[rutaProtegidaCarritoGuard],data:{ role:'usuario'}
+    canActivate:[rutaProtegidaCarritoGuard],data:{role:'usuario'}
   },
  
 

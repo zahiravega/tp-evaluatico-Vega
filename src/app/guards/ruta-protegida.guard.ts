@@ -8,9 +8,14 @@ import { Router } from '@angular/router';
 import { map, switchMap, of, from } from 'rxjs'
 
 export const rutaProtegidaGuard: CanActivateFn = (route, state) => {
+  
   //inyectamos/ instanciamos servicio de autentificacion en el guardian (de forma local)
-  const servicioAuth = inject(AuthService);
+  //Este servicio es responsable de manejar la lógica de autenticación y autorización, como verificar el UID del usuario o su rol.
+  const servicioAuth = inject(AuthService); 
+
+
   //inyectamos/instaciamos servicio de rutas de forma local
+  //permite navegar entre rutas o generar redirecciones.
   const servicioRutas = inject(Router);
 
   //especificamos cual es el rol que va a esperar el guardian para activarse
@@ -18,7 +23,8 @@ export const rutaProtegidaGuard: CanActivateFn = (route, state) => {
 
 
   //FROM-> convierte una promesa en observable 
-  //
+
+  //este toma el uid del usuario y retona segun el rol
   return from(servicioAuth.obtenerUid()).pipe(
     switchMap(uid =>{
       if (uid) {
@@ -28,9 +34,11 @@ export const rutaProtegidaGuard: CanActivateFn = (route, state) => {
               //si coincide el rol esperado, damos acceso al usuario
               console.log("usuario verificado como administrador")
 
+              //el usuario al ser admin lo retornamos a 'admin'
               return true;
             }
             else{
+
               //denegamos el accceso al usuario 
               return false;
             }

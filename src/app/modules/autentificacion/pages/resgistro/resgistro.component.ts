@@ -44,7 +44,7 @@ export class ResgistroComponent {
   coleccionUsuarios: Usuario[] = [];
 
 
-  //FIN IMPORTACIONES 
+
 
   constructor(
     public servicioAuth: AuthService,

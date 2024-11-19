@@ -1,7 +1,8 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { Productos } from 'src/app/models/productos';
 import { CrudService } from 'src/app/modules/admin/services/crud.service';
-import { CarritoService } from 'src/app/modules/carrito/services/carrito.service';
+import { CarritoService } from 'src/app/modules/carrito/services/carrito.service'; 
+import { AuthService } from 'src/app/modules/autentificacion/services/auth.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -33,7 +34,8 @@ export class CardComponent {
 
   constructor(
     public servicioCrud:CrudService,
-    public servicioCarrito: CarritoService //Aca el servicio carrito llama a carritoservice
+    public servicioCarrito: CarritoService, //Aca el servicio carrito llama a carritoservice
+    private servicioAuth: AuthService
   ){}
 
   ngOnInit():void{
@@ -55,7 +57,31 @@ export class CardComponent {
   }
 
   agregarProducto(info:Productos){
+
     const stockDeseado = Math.trunc(this.stock);
+
+    this.servicioAuth.obtenerUid().then(uid => {
+     
+//condicional para el usuario
+      if(uid){
+        Swal.fire({
+          title: "Su producto se añadió con éxito",
+          icon: "success"
+        });
+
+      } else {
+
+        Swal.fire({
+          title: "Usuario no logueado",
+          text: "Por favor inicie sesion",
+          icon: "error"
+        });
+
+      }
+
+    });
+
+    //condicional para el stock
 
     if(stockDeseado<=0 || stockDeseado>info.stock){
       Swal.fire({

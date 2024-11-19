@@ -30,8 +30,8 @@ import {AngularFireStorageModule} from '@angular/fire/compat/storage';// trabaja
     //componentes globales
     SharedModule,
     
-    FormsModule, // Asegúrate de importar FormsModule para ngModel
-    //vinculacion con firebase
+    FormsModule, 
+    
     AngularFireModule.initializeApp(enviroment.firebaseConfig), //inicializar firebase dentro del proyecto
     AngularFireAuthModule,
     AngularFireStorageModule,

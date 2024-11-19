@@ -56,7 +56,6 @@ export class InicioDeSesionComponent {
       const usuarioBD = await this.servicioAuth.obtenerUsuario(credenciales.email);
 
       if (!usuarioBD || usuarioBD.empty) {
-
         Swal.fire({
           title: "¡Oh no!",
           text: "El correo electrónico no está registrado",
@@ -100,10 +99,14 @@ export class InicioDeSesionComponent {
 
         //almacenamos y enviamos por parametro el rol de los datos de usuario obtenidos 
         this.servicioAuth.setUsuarioRol(usuarioData.rol);
+
+
         if(usuarioData.rol==="admin"){
           console.log("Inicio de administrador");
 // si es administrador, redirecciona a la vista de "admin"
           this.servicioRutas.navigate(['/admin']);
+
+          
         }else{
           console.log("Inicio de visitante");
 // si es de otro tipo de usuario, redirecciona al "inicio"

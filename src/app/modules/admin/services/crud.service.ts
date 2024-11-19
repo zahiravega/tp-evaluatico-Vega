@@ -41,6 +41,8 @@ export class CrudService {
          producto.imagen = url;
 
         const resultado = await this.productosCollection.doc(idProducto).set(producto);
+        //.doc = ingresa al documento idProducto
+        //.set = guarda o actualiza un documento en Firestore con los datos que se pasan como argumento.
 
         resolve(resultado);
       }
@@ -61,6 +63,7 @@ snapshotChanges = toma captura del estado de los datos
 pipe = tuberias que retornan un nuevo arreglo
 map= "mapea" p recorre esa nueva informacion 
 a = resguarda la nueva informacion y la envia como un nuevo documento
+action.payload.doc.data()= Dentro de cada action, se obtiene el documento de la colección con payload.doc, y luego se extraen los datos del documento con .data().
     */
     return this.productosCollection.snapshotChanges().pipe(map(action => action.map(a => a.payload.doc.data())))
 
@@ -136,9 +139,9 @@ async subirImagen(nombre: string, imagen: any, ruta: string){
     .then(resp => {
       return resp;
     })
-
     return this.respuesta;
   }
+  
   catch(error){
     console.log(error);
 

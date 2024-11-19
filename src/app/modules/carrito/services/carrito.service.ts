@@ -16,8 +16,8 @@ export class CarritoService {
   //modelo que va a recibir los datos del pedido que se subira a la base de datos
   pedido: Pedido = {
     idPedido: '',
+
     productos: {
-      
       idProducto: '',
       nombre: '',
       descripcion: '',
@@ -40,9 +40,11 @@ export class CarritoService {
     private servicioAuth: AuthService,
     private servicioFirestore: AngularFirestore,
     public servicioRutas: Router,
+
   ) {
     this.pedidosColeccion = this.servicioFirestore.collection(`usuarios/${this.uid}/pedido`)
   }
+
 
 //inicializa el carrito y la subcoleccion de pedidos
   iniciarCarrito(){
@@ -51,8 +53,8 @@ export class CarritoService {
 
       if(this.uid===null){
         console.error('no se obtuvo el UID. Intente iniciar sesion');
-
         this.servicioRutas.navigate(['/inicio-sesion']);
+
       } else {
 
         this.pedidosColeccion= this.servicioFirestore.collection(`usuarios/${this.uid}/pedido`)
@@ -62,10 +64,12 @@ export class CarritoService {
     })
   }
 
+
   //obtiene los productos que ya esten dentro del pedido
 obtenerCarrito(){
 return this.pedidosColeccion.snapshotChanges().pipe(map(action=>action.map(a=>a.payload.doc.data())))
 }
+
 
 crearPedido(producto:Productos,stock:number){
   try{

@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import { Productos } from 'src/app/models/productos';
 import { CrudService } from '../../services/crud.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+//formControl: Permite rastrear el valor, estado, y validación de ese campo específico.
+//formGroup: Permite gestionar el estado y las validaciones de un grupo de controles como una unidad.
+//validators: Ayuda a asegurar que los datos ingresados por el usuario cumplen ciertas reglas antes de enviarlos al servidor.
+
+
 //importacion de sweetalert
 import Swal from 'sweetalert2';
 
@@ -11,19 +16,27 @@ import Swal from 'sweetalert2';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent {
-  //creamos coleccion local de productos -> la definimos como array
+  //creamos coleccion local de productos -> la definimos como array inicialmente va a estar vacia
+  //se utilizará para almacenar todos los productos obtenidos de la base de datos
   coleccionProductos: Productos[] = [];
 
+  //Se utiliza para almacenar temporalmente un producto que el usuario selecciona en la tabla, ya sea para editarlo o eliminarlo.
   productoSeleccionado!: Productos; // ! <- tomar valores vacios
 
+  //Se utiliza para almacenar temporalmente un producto que el usuario selecciona en la tabla, ya sea para editarlo o eliminarlo.
   modalVisibleProducto: boolean = false;
 
+
+//Declara una propiedad llamada nombreImagen que será de tipo string (cadena de texto) y utiliza el operador ! porque no tiene un valor inicial.
+//Esta propiedad almacenará el nombre del archivo de la imagen que el usuario sube al formulario
   nombreImagen!: string; // obtendrá el nombre de la imagen
+
+
 
   imagen!: string; // obtendrá la ruta de la imagen
 
-  //definimos formulario para los productos
 
+  //definimos formulario para los productos
   /*
 Los atributos alfanumericos (string) se inicializan con comillas simples 
 y atributos numericos (number) se inicializan en 0
@@ -38,13 +51,25 @@ y atributos numericos (number) se inicializan en 0
     alt: new FormControl('', Validators.required),
    stock: new FormControl(0, Validators.required),
   })
-  constructor(public servicioCrud: CrudService) { }
 
+
+  constructor(public servicioCrud: CrudService) { } //inyectamos el servicio 
+  //La propiedad servicioCrud es pública y accesible desde cualquier lugar donde se tenga acceso a una instancia de TableComponent.
+
+
+  /*Cuando el componente TableComponent se inicializa, se ejecuta ngOnInit().
+Dentro de ngOnInit(), se llama al método obtenerProductos() del servicio CrudService.
+obtenerProductos() devuelve un observable que emite los datos de los productos.
+Se suscribe al observable con subscribe().
+Cuando los datos de los productos son recibidos, se ejecuta la función flecha.
+La lista de productos recibida (almacenada en producto) se asigna a la propiedad coleccionProductos del componente, lo que probablemente actualizará la vista con esos productos.
+*/
   ngOnInit(): void {
     this.servicioCrud.obtenerProductos().subscribe(producto => {
       this.coleccionProductos = producto;
     })
   }
+
 
   async agregarProducto() {
     if (this.producto.valid) {
@@ -92,6 +117,8 @@ y atributos numericos (number) se inicializan en 0
     }
   };
 
+
+
   // CARGAR IMÁGENES
   cargarImagen(event: any) {
     // Variable para obtener el archivo subido desde el input del HTML
@@ -124,13 +151,16 @@ y atributos numericos (number) se inicializan en 0
     }
   }
 
+
+
   //funcion vinculada al modal y el boton de la tabla
   mostrarBorrar(productoSeleccionado: Productos) {
     this.modalVisibleProducto = true;
 
     this.productoSeleccionado = productoSeleccionado;
-
   }
+
+
 
   borrarProducto(){
     //ahora enviamos tanto el ID del producto (para identificarlo en firestore) y la url de la imagen (para identificarlo en storage)
@@ -155,6 +185,7 @@ y atributos numericos (number) se inicializan en 0
   }
 
 
+  
   // EDITAR PRODUCTOS
   // Se envía y llama al momento que tocamos botón "Editar" de la tabla
   mostrarEditar(productoSeleccionado: Productos) {
@@ -223,6 +254,7 @@ y atributos numericos (number) se inicializan en 0
       this.actualizarProducto(datos);
     }
 }
+
 //ACTUALIZAR la informacion ya existente de los productos
 actualizarProducto(datos:Productos){
   // Enviamos al método el id del producto seleccionado y los datos actualizados

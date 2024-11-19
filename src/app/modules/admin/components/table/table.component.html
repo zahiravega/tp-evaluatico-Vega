@@ -8,8 +8,8 @@
       <th scope="col">Detalles</th>
       <th scope="col">Talles</th>
       <th scope="col">Categoria</th>
-      <th scope="col">Acciones</th>
       <th scope="col">Stock</th>
+      <th scope="col">Acciones</th>
     </tr>
 
   </thead>
@@ -109,10 +109,11 @@
 
 
         <div class="mb-3">
-          <label for="form-label">Ingrese los talles disponibles</label>
-          <input class="form-control" type="text" formControlName="descripcion2" placeholder="Ej:95 y 100">
+          <label for="form-label">Ingrese el stock del producto</label>
+          <input class="form-control" type="number" formControlName="stock" placeholder="5">
         </div>
       </div>
+
       <!--ACCIONES DEL MODAL-->
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-secondary" (click)="agregarProducto()"
@@ -186,8 +187,8 @@
 
 
        <div class="mb-3">
-          <label for="form-label">Ingrese los talles disponibles</label>
-          <input class="form-control" type="text" formControlName="descripcion2" placeholder="{{productoEdit.stock}}">
+          <label for="form-label">Ingrese el stock disponible:</label>
+          <input class="form-control" type="number" formControlName="stock" placeholder="{{productoEdit.stock}}">
         </div>
 
       </div>

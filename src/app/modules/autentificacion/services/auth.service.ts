@@ -20,7 +20,7 @@ export class AuthService {
   constructor(
     private auth: AngularFireAuth,
     private servicioFirestore: AngularFirestore
-
+   // es privada y solo es accesible dentro de la clase authservice
   
   ) { }
 
@@ -49,7 +49,6 @@ export class AuthService {
     /*si el usuario no respeta la estructura de la interfaz/
     si tuvo problemas con el registroo*/
     
-    
     if(user== null){
       return null;
     }else{
@@ -67,11 +66,12 @@ export class AuthService {
     return this.servicioFirestore.collection("usuarios", ref=> ref.where('email','==',email)).get().toPromise();
   }
 
+  
   //FINCIÒN PARA RECUPERAR TOKEN (USADA PARA EL BOTON DE VER TODOS LOS PRODUCTOS)
-
 obtenerToken(){
   return localStorage.getItem('token');
 }
+
 
   //funcion para obtener el rol del usuario
 obtenerRol( uid:string):Observable<string | null > { 
